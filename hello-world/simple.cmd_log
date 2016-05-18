@@ -1,0 +1,11 @@
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.syr" 
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 simple.ngc simple.ngd  
+map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o simple_map.ncd simple.ngd simple.pcf 
+par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 simple_map.ncd simple.ncd simple.pcf 
+trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml simple.twx simple.ncd -o simple.twr simple.pcf 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 simple.ngc simple.ngd  
+map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o simple_map.ncd simple.ngd simple.pcf 
+par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 simple_map.ncd simple.ncd simple.pcf 
+trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml simple.twx simple.ncd -o simple.twr simple.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f simple.ut simple.ncd 
