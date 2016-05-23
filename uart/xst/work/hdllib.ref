@@ -1,0 +1,4 @@
+AR uart_rx behavioral C:/Users/sameer/minor/uart/uart_rx.vhd sub00/vhpl03 1464025108
+AR mod_m_counter behavioral C:/Users/sameer/minor/uart/mod_m_Counter.vhd sub00/vhpl01 1464025837
+EN mod_m_counter NULL C:/Users/sameer/minor/uart/mod_m_Counter.vhd sub00/vhpl00 1464025836
+EN uart_rx NULL C:/Users/sameer/minor/uart/uart_rx.vhd sub00/vhpl02 1464025838

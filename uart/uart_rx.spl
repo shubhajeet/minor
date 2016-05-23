@@ -1,0 +1,9 @@
+[Inputs]
+clk
+reset
+en_clk
+=din[7:0]=
+[Outputs]
+rx_done
+=dout[7:0]=
+[BiDir]
