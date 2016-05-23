@@ -1,0 +1,12 @@
+V3 7
+FL C:/Users/sameer/minor/uart/mod_m_Counter.vhd 2016/05/23.22:24:28 O.87xd
+EN work/mod_m_Counter 1464025836 FL C:/Users/sameer/minor/uart/mod_m_Counter.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
+AR work/mod_m_Counter/Behavioral 1464025837 \
+      FL C:/Users/sameer/minor/uart/mod_m_Counter.vhd EN work/mod_m_Counter 1464025836
+FL C:/Users/sameer/minor/uart/uart_rx.vhd 2016/05/23.23:23:00 O.87xd
+EN work/uart_rx 1464025107 FL C:/Users/sameer/minor/uart/uart_rx.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
+AR work/uart_rx/Behavioral 1464025108 \
+      FL C:/Users/sameer/minor/uart/uart_rx.vhd EN work/uart_rx 1464025107 \
+      CP mod_m_Counter
