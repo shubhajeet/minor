@@ -1,0 +1,19 @@
+Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/sujit/Projects/minor/hello-world/tb_helloworld_isim_beh.exe -prj C:/Users/sujit/Projects/minor/hello-world/tb_helloworld_beh.prj work.tb_helloworld 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/sujit/Projects/minor/hello-world/simple.vhd" into library work
+Parsing VHDL file "C:/Users/sujit/Projects/minor/hello-world/tb_helloworld.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity simple [simple_default]
+Compiling architecture behavior of entity tb_helloworld
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable C:/Users/sujit/Projects/minor/hello-world/tb_helloworld_isim_beh.exe
+Fuse Memory Usage: 28608 KB
+Fuse CPU Usage: 1390 ms
