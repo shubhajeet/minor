@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3516" delta="old" >Found error in file &quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot;. 
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3458" delta="old" >Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file &quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale/Grayscale_vhdl.prj</arg>&quot; may be inaccurate. Please put the files in the project file in correct order with keyword &apos;nosort&apos; at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">32</arg>. <arg fmt="%s" index="3">parse error, unexpected IDENTIFIER</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">36</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">C</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">36</arg>. <arg fmt="%s" index="3">C</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">37</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">Carry</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">37</arg>. <arg fmt="%s" index="3">Carry</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/grayscale/grayscale.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+</msg>
+
+</messages>
+
