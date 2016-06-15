@@ -9,3 +9,7 @@ xst -intstyle ise -ifn "C:/Users/sameer/minor/uart/uart_rx.xst" -ofn "C:/Users/s
 xst -intstyle ise -ifn "C:/Users/sameer/minor/uart/uart_rx.xst" -ofn "C:/Users/sameer/minor/uart/uart_rx.syr" 
 xst -intstyle ise -ifn "C:/Users/sameer/minor/uart/uart_rx.xst" -ofn "C:/Users/sameer/minor/uart/uart_rx.syr" 
 xst -intstyle ise -ifn "C:/Users/sameer/minor/uart/uart_rx.xst" -ofn "C:/Users/sameer/minor/uart/uart_rx.syr" 
+xst -intstyle ise -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.syr" 
+xst -intstyle ise -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.syr" 
+vhdtdtfi -prj uart -o /media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.vhi -module uart_rx -template /opt/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mod_m_Counter.vhd -lib work uart_rx.vhd 
+xst -intstyle ise -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.syr" 

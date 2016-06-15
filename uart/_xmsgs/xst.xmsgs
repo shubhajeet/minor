@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="1411" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/sameer/minor/uart/uart_rx.vhd</arg>&quot; Line <arg fmt="%d" index="2">66</arg>. Parameter <arg fmt="%s" index="3">en_clk</arg> of mode <arg fmt="%s" index="4">in</arg> can not be associated with a formal <arg fmt="%s" index="5">port</arg> of mode <arg fmt="%s" index="6">out</arg>.
+<msg type="error" file="HDLParsers" num="1411" delta="old" >&quot;<arg fmt="%s" index="1">/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.vhd</arg>&quot; Line <arg fmt="%d" index="2">66</arg>. Parameter <arg fmt="%s" index="3">en_clk</arg> of mode <arg fmt="%s" index="4">in</arg> can not be associated with a formal <arg fmt="%s" index="5">port</arg> of mode <arg fmt="%s" index="6">out</arg>.
 </msg>
 
 </messages>

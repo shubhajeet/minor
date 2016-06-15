@@ -71,6 +71,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="uart_rx.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="uart_rx.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="uart_rx.syr"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="uart_rx.vhi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="uart_rx.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="uart_rx_envsettings.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="uart_rx_map.map" xil_pn:subbranch="Map"/>
@@ -87,6 +88,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1464021361" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1464021361">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1464025102" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2173049419627108880" xil_pn:start_ts="1464025102">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -112,7 +114,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464025837" xil_pn:in_ck="623459598007435216" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="8005484645965376869" xil_pn:start_ts="1464025833">
+    <transform xil_pn:end_ts="1464042108" xil_pn:in_ck="623459598007435216" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-9182906120865106319" xil_pn:start_ts="1464042104">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
@@ -137,7 +139,6 @@
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="uart_rx.bld"/>

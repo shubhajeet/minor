@@ -1,15 +1,16 @@
-Release 13.4 ngdbuild O.87xd (lin64)
+Release 13.4 ngdbuild O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -filter
-iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -i -p
-xc3s700an-fgg484-4 simple.ngc simple.ngd
+Command Line: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -filter
+iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -uc constrains.ucf
+-uc hello-world.ucf -p xc3s100e-vq100-4 simple.ngc simple.ngd
 
-Reading NGO file
-"/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.ngc" ...
+Reading NGO file "C:/Users/sujit/Projects/minor/hello-world/simple.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "constrains.ucf" ...
+Annotating constraints to design from ucf file "hello-world.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -27,10 +28,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 401768 kilobytes
+Total memory usage is 183472 kilobytes
 
 Writing NGD file "simple.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   5 sec
 
 Writing NGDBUILD log file "simple.bld"...

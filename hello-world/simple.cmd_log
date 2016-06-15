@@ -9,3 +9,6 @@ map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconf
 par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 simple_map.ncd simple.ncd simple.pcf 
 trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml simple.twx simple.ncd -o simple.twr simple.pcf 
 bitgen -filter "iseconfig/filter.filter" -intstyle ise -f simple.ut simple.ncd 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/hello-world/simple.xst" -ofn "C:/Users/sujit/Projects/minor/hello-world/simple.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constrains.ucf -uc hello-world.ucf -p xc3s100e-vq100-4 simple.ngc simple.ngd  
+map -filter "C:/Users/sujit/Projects/minor/hello-world/iseconfig/filter.filter" -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o simple_map.ncd simple.ngd simple.pcf 

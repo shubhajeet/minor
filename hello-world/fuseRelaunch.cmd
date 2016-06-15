@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/sujit/Projects/minor/hello-world/tb_helloworld_isim_beh.exe" -prj "C:/Users/sujit/Projects/minor/hello-world/tb_helloworld_beh.prj" "work.tb_helloworld" 
+-intstyle "ise" -incremental -o "C:/Users/sujit/Projects/minor/hello-world/simple_isim_beh.exe" -prj "C:/Users/sujit/Projects/minor/hello-world/simple_beh.prj" "work.simple" 

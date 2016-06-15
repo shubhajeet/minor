@@ -1,21 +1,18 @@
-Release 13.4 - xst O.87xd (lin64)
+Release 13.4 - xst O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.79 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.79 secs
  
---> 
-Reading design: simple.prj
+--> Reading design: simple.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -45,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "simple"
 Output Format                      : NGC
-Target Device                      : xc3s700an-4-fgg484
+Target Device                      : xc3s100e-4-vq100
 
 ---- Source Options
 Top Module Name                    : simple
@@ -107,20 +104,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.vhd" in Library work.
-Entity <simple> compiled.
-Entity <simple> (Architecture <Behavioral>) compiled.
+WARNING:HDLParsers:3607 - Unit work/simple is now defined in a different file.  It was defined in "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.vhd", and is now defined in "C:/Users/sujit/Projects/minor/hello-world/simple.vhd".
+WARNING:HDLParsers:3607 - Unit work/simple/Behavioral is now defined in a different file.  It was defined in "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.vhd", and is now defined in "C:/Users/sujit/Projects/minor/hello-world/simple.vhd".
+Compiling vhdl file "C:/Users/sujit/Projects/minor/hello-world/simple.vhd" in Library work.
+Architecture behavioral of Entity simple is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <simple> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <simple> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <simple> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <simple> in library <work> (Architecture <behavioral>).
 Entity <simple> analyzed. Unit <simple> generated.
 
 
@@ -131,7 +129,7 @@ Entity <simple> analyzed. Unit <simple> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <simple>.
-    Related source file is "/media/sujit/Windows/Users/sujit/Projects/minor/hello-world/simple.vhd".
+    Related source file is "C:/Users/sujit/Projects/minor/hello-world/simple.vhd".
     Found 1-bit xor2 for signal <led<2>>.
 Unit <simple> synthesized.
 
@@ -212,12 +210,12 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s700anfgg484-4 
+Selected Device : 3s100evq100-4 
 
- Number of Slices:                        2  out of   5888     0%  
- Number of 4 input LUTs:                  4  out of  11776     0%  
+ Number of Slices:                        2  out of    960     0%  
+ Number of 4 input LUTs:                  4  out of   1920     0%  
  Number of IOs:                          12
- Number of bonded IOBs:                  12  out of    372     3%  
+ Number of bonded IOBs:                  12  out of     66    18%  
 
 ---------------------------
 Partition Resource Summary:
@@ -250,7 +248,7 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 7.213ns
+   Maximum combinational path delay: 6.422ns
 
 Timing Detail:
 --------------
@@ -260,7 +258,7 @@ All values displayed in nanoseconds (ns)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 12 / 8
 -------------------------------------------------------------------------
-Delay:               7.213ns (Levels of Logic = 3)
+Delay:               6.422ns (Levels of Logic = 3)
   Source:            sw<0> (PAD)
   Destination:       led<3> (PAD)
 
@@ -268,25 +266,24 @@ Delay:               7.213ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   0.849   0.776  sw_0_IBUF (led_4_OBUF)
-     LUT2:I0->O            1   0.648   0.420  led_0_and00001 (led_0_OBUF)
-     OBUF:I->O                 4.520          led_0_OBUF (led<0>)
+     IBUF:I->O             5   1.218   0.808  sw_0_IBUF (led_4_OBUF)
+     LUT2:I0->O            1   0.704   0.420  led_0_and00001 (led_0_OBUF)
+     OBUF:I->O                 3.272          led_0_OBUF (led<0>)
     ----------------------------------------
-    Total                      7.213ns (6.017ns logic, 1.196ns route)
-                                       (83.4% logic, 16.6% route)
+    Total                      6.422ns (5.194ns logic, 1.228ns route)
+                                       (80.9% logic, 19.1% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.92 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.09 secs
  
 --> 
 
-
-Total memory usage is 517336 kilobytes
+Total memory usage is 286292 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

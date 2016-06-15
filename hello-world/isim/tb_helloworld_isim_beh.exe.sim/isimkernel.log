@@ -2,14 +2,14 @@ Command line:
    tb_helloworld_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49789
+     -socket  49959
 
-Wed May 18 07:49:33 2016
+Fri Jun 10 11:22:14 2016
 
 
- Elaboration Time: 0.0625 sec
+ Elaboration Time: 0.015625 sec
 
- Current Memory Usage: 839.102 Meg
+ Current Memory Usage: 834.363 Meg
 
  Total Signals          : 4
  Total Nets             : 12
@@ -21,9 +21,9 @@ Wed May 18 07:49:33 2016
  Total Scalar Nets and Variables : 372
 Total Line Count : 6
 
- Total Simulation Time: 0.09375 sec
+ Total Simulation Time: 0.015625 sec
 
- Current Memory Usage: 681.816 Meg
+ Current Memory Usage: 1148.94 Meg
 
-Wed May 18 07:53:17 2016
+Fri Jun 10 11:22:45 2016
 

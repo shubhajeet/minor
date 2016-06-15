@@ -1,18 +1,21 @@
-Release 13.4 - xst O.87xd (nt64)
+Release 13.4 - xst O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Reading design: uart_rx.prj
+--> 
+Reading design: uart_rx.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -68,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -104,14 +107,14 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/sameer/minor/uart/mod_m_Counter.vhd" in Library work.
+Compiling vhdl file "/media/sujit/Windows/Users/sujit/Projects/minor/uart/mod_m_Counter.vhd" in Library work.
 Architecture behavioral of Entity mod_m_counter is up to date.
-Compiling vhdl file "C:/Users/sameer/minor/uart/uart_rx.vhd" in Library work.
-Entity <uart_rx> compiled.
-ERROR:HDLParsers:1411 - "C:/Users/sameer/minor/uart/uart_rx.vhd" Line 66. Parameter en_clk of mode in can not be associated with a formal port of mode out.
+Compiling vhdl file "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.vhd" in Library work.
+ERROR:HDLParsers:1411 - "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.vhd" Line 66. Parameter en_clk of mode in can not be associated with a formal port of mode out.
 --> 
 
-Total memory usage is 240444 kilobytes
+
+Total memory usage is 496392 kilobytes
 
 Number of errors   :    1 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
