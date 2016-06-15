@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\sujit\Projects\minor\ledswitch\ledcontroller.ncd
+OUTFILE=C:\Users\sujit\Projects\minor\ledswitch\ledcontroller.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\Users\sujit\Projects\minor\ledswitch
+LICENSE=WebPack
+USER_INFO=211019507_0_0_750

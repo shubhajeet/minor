@@ -1,0 +1,49 @@
+
+****** PlanAhead v13.4 (64-bit)
+  **** Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+    ** Copyright 1986-1999, 2001-2011 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common-78] Attempting to get a license: PlanAhead
+INFO: [Common-82] Got a license: PlanAhead
+INFO: [Common-86] Your PlanAhead license expires in -70 day(s)
+INFO: [Device-25] Loading parts and site information from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\arch.xmlParsing RTL primitives file [C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml]
+start_gui
+starting gui ...
+source C:/Users/sujit/Projects/minor/ledswitch/pa.fromNetlist.tcl
+# create_project -name ledswitch -dir "C:/Users/sujit/Projects/minor/ledswitch/planAhead_run_3" -part xc3s100evq100-4
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/sujit/Projects/minor/ledswitch/ledcontroller.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/sujit/Projects/minor/ledswitch} }
+# set_property target_constrs_file "ledswitch_constrains.ucf" [current_fileset -constrset]
+Adding file 'C:\Users\sujit\Projects\minor\ledswitch\ledswitch_constrains.ucf' to fileset 'constrs_1'
+# add_files [list {ledswitch_constrains.ucf}] -fileset [get_property constrset [current_run]]
+# open_netlist_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to part: xc3s100evq100-4
+Release 13.4 - ngc2edif O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design ledcontroller.ngc ...
+WARNING:NetListWriters:298 - No output is written to ledcontroller.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ledcontroller.edif ...
+ngc2edif: Total memory usage is 78476 kilobytes
+
+Parsing EDIF File [.\planAhead_run_3\ledswitch.data\cache\ledcontroller_ngc_11b22d14.edif]
+Finished Parsing EDIF File [.\planAhead_run_3\ledswitch.data\cache\ledcontroller_ngc_11b22d14.edif]
+Qt: Untested Windows version 6.2 detected!
+exit
+stop_gui
+INFO: [PlanAhead-261] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead

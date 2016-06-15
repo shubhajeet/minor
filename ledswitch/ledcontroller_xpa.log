@@ -1,0 +1,20 @@
+Creating log file C:\Users\sujit\Projects\minor\ledswitch\ledcontroller_xpa.log.
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+C:\Xilinx\13.4\ISE_DS\ISE\.
+   "ledcontroller" is an NCD, version 3.2, device xc3s500e, package fg320, speed
+-4
+
+INFO:Power:1693 - 
+   --------------------------------------------------------------
+                         The power estimate will be calculated using PRODUCTION
+   data.
+   --------------------------------------------------------------
+
+Design load 20% completeDesign load 25% completeDesign load 30% completeDesign load 60% completeDesign load 95% completeDesign load 100% completeRunning Vector-less Activity Propagation
+......
+Finished Running Vector-less Activity Propagation
+Finished Running Vector-less Activity Propagation 0 secs 
+
+Design 'ledcontroller.ncd' and constraints 'ledcontroller.pcf' opened
+successfully
+

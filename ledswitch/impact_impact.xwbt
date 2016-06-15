@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/media/sujit/Windows/Users/sujit/Projects/minor/ledswitch/impact.xsl
+OUTFILE=/media/sujit/Windows/Users/sujit/Projects/minor/ledswitch/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/media/sujit/Windows/Users/sujit/Projects/minor/ledswitch
+LICENSE=iMPACT
+USER_INFO=iMPACT

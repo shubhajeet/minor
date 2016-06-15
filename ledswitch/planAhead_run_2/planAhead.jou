@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+# Start of session at: Fri Jun 10 11:56:31 2016
+# Process ID: 6800
+# Log file: C:/Users/sujit/Projects/minor/ledswitch/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/sujit/Projects/minor/ledswitch/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/sujit/Projects/minor/ledswitch/pa.fromNetlist.tcl
+exit
+stop_gui
