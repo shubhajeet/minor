@@ -3,7 +3,7 @@ import socket, sys, struct, os
 class maccon(object):
     def __init__(self, interface = "enp3s0", src = "\x01\x02\x03\x04\x05\x06",dst = "\x01\x02\x03\x04\x05\x06" , ethertype = "\x08\x01"):
         try:
-            self.s = socket.socket(socket.AF_PACKET,socket.SOCK_RAW) 
+            self.s = socket.socket(socket.AF_PACKET,socket.SOCK_RAW,socket.ntohs(0x0003)) 
             self.s.bind((interface,0))                     
         except socket.error:
             print 'error'
