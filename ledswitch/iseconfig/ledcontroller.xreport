@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-06-12T14:02:05</DateModified>
+  <DateModified>2016-06-17T23:23:00</DateModified>
   <ModuleName>ledcontroller</ModuleName>
   <SummaryTimeStamp>2016-06-11T07:17:05</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/sujit/Projects/minor/ledswitch/iseconfig/ledcontroller.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/sujit/Projects/minor/ledswitch\</ImplementationReportsDirectory>
+  <SavedFilePath>/media/sujit/Windows/Users/sujit/Projects/minor/ledswitch/iseconfig/ledcontroller.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/media/sujit/Windows/Users/sujit/Projects/minor/ledswitch/</ImplementationReportsDirectory>
   <DateInitialized>2016-06-10T11:47:23</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>
