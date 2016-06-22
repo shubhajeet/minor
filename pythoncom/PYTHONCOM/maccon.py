@@ -37,9 +37,9 @@ class Maccon(object):
             print 'error'
             sys.exit(1)
         self.cnf = ConfigFile(configfile)
-        self.src_addr = cnf.getDeviceMacAddress()
+        self.src_addr = self.cnf.getDeviceMacAddress()
         self.dst_addr = dst
-        self.ethertype = cnf.getEtherType()
+        self.ethertype = self.cnf.getEtherType()
 
     def grayScale(self,infile,ofile):
         """
