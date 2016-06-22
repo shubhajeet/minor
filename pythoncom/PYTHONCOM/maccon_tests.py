@@ -1,8 +1,9 @@
 from nose.tools import *
-import Pythoncon
+form maccon import *
+from PIL import Image
 
-server = none
-receiver = none
+server = None
+receiver = None
 
 def setup():
     print "SETUP!"
@@ -12,15 +13,15 @@ def setup():
 def teardown():
     print "TEAR DOWN!"
 
-def test_get_macaddress():
-    print "testing correct detection of macaddress"
-    assert (server.getMacAddress() == "54:ee:75:7e:d4:61")
-    
 def test_send_receive():
     print "running sever and receiver"
     data = "this is a trial"
     assert(receiver.listen() == data)
     assert(sender.send(data))
 
+def test_pic_send_receive():
+    print "running"
+    
+    
     
     

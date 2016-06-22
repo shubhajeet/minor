@@ -1,7 +1,8 @@
 import socket, sys, struct, os
 import netifaces
 from PIL import Image
-
+from config import *
+from Network import *
 """
 macon 
 
@@ -25,7 +26,7 @@ ethertype > 0x6000
 class Maccon(object):
     cropsize = (22,22)
     imgFormat = "RGB"
-    def __init__(self, interface = "enp3s0"):
+    def __init__(self, interface = "enp3s0", dst = "\x00\x01\x02\x03\x05\x06", configfile = "conf.ini"):
         """
         initialization of the socket
         """
@@ -35,9 +36,10 @@ class Maccon(object):
         except socket.error:
             print 'error'
             sys.exit(1)
-        self.src_addr = src
+        self.cnf = ConfigFile(configfile)
+        self.src_addr = cnf.getDeviceMacAddress()
         self.dst_addr = dst
-        self.ethertype = ethertype
+        self.ethertype = cnf.getEtherType()
 
     def grayScale(self,infile,ofile):
         """
@@ -54,23 +56,30 @@ class Maccon(object):
             self.outImage = Image.new("RGB", self.inImage.size())
         except:
             pass
-        xmax = self.inImage.size()
-        ymax = self.inImage.size()
-        
+        self.pixr = self.inImage.load()
+        self.pix2 = self.outImage.load()
+        xmax, ymax = self.inImage.size()
+        xc, yc = cropsize
+        pacx, pacy = 0 , 0
+        xp, yp = xmax / xc, ymax/yc
+        for pacx in range(0,xp):
+            for pacy in range(0,yp):
+                payload = ""
+                for x in range(pacx*xc,(pacx+1)*xc):
+                    for y in range(pacy*yc,(pacy+1)*yc):
+                        payload = payload + "\X%X\X%X\X%X" % self.pixr[x,y]
+                self.send(payload)
+                rpayload = self.receive()
+                for x in range(pacx*xc,(pacx+1)*xc):
+                    for y in range(pacy*yc,(pacy+1)*yc):
+                        format = "\X"*xmax*ymax
+                        pixgot = struct.unpack(format,payload)
+                        #decoding the packet
+        #when all the files have been recieved
+        self.outImage.save(ofile)
+        self.inImage.show()
+        self.outImage.show()
     
-    
-    def getMacAddr(self,interface):
-        """
-        return the acutal mac address of the computer that it is running on
-        """
-        if interface in netifaces.interfaces():
-            addr = netifaces.ifaddresses(interface)
-            mac = addr[netifaces.AF_LINK][0]['addr']
-            return mac
-        else:
-            return False
-        
-
     def receive(self):
         """
         listens to receive a frame of data
