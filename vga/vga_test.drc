@@ -1,7 +1,7 @@
-Release 13.4 Drc O.87xd (lin64)
+Release 13.4 Drc O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Thu Jun 23 18:51:44 2016
+Thu Jun 23 13:46:15 2016
 
 drc -z vga_test.ncd vga_test.pcf
 

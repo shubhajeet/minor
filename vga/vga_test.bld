@@ -1,15 +1,15 @@
-Release 13.4 ngdbuild O.87xd (lin64)
+Release 13.4 ngdbuild O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -filter
-iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -i -p
+Command Line: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -filter
+iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -uc vga_cons.ucf -p
 xc3s500e-fg320-4 vga_test.ngc vga_test.ngd
 
-Reading NGO file
-"/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.ngc" ...
+Reading NGO file "C:/Users/sujit/Projects/minor/vga/vga_test.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "vga_cons.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 395304 kilobytes
+Total memory usage is 183456 kilobytes
 
 Writing NGD file "vga_test.ngd" ...
-Total REAL time to NGDBUILD completion:  4 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "vga_test.bld"...

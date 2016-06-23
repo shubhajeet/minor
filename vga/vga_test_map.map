@@ -1,17 +1,17 @@
-Release 13.4 Map O.87xd (lin64)
+Release 13.4 Map O.87xd (nt64)
 Xilinx Map Application Log File for Design 'vga_test'
 
 Design Information
 ------------------
 Command Line   : map -filter
-/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter
--intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o
-vga_test_map.ncd vga_test.ngd vga_test.pcf 
+C:/Users/sujit/Projects/minor/vga/iseconfig/filter.filter -intstyle ise -p
+xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd
+vga_test.ngd vga_test.pcf 
 Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Jun 23 18:50:26 2016
+Mapped Date    : Thu Jun 23 13:45:36 2016
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
@@ -54,8 +54,8 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                2.10
 
-Peak Memory Usage:  572 MB
-Total REAL time to MAP completion:  4 secs 
+Peak Memory Usage:  288 MB
+Total REAL time to MAP completion:  10 secs 
 Total CPU time to MAP completion:   2 secs 
 
 NOTES:

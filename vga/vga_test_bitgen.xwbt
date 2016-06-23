@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.ncd
-OUTFILE=/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.bit
+INFILE=C:\Users\sujit\Projects\minor\vga\vga_test.ncd
+OUTFILE=C:\Users\sujit\Projects\minor\vga\vga_test.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=/media/sujit/Windows/Users/sujit/Projects/minor/vga
+WORKINGDIR=C:\Users\sujit\Projects\minor\vga
 LICENSE=WebPack
 USER_INFO=211019507_0_0_750
