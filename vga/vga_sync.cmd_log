@@ -1,0 +1,9 @@
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.syr" 
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.syr" 
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.syr" 
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.syr" 
+xst -intstyle ise -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -ifn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.xst" -ofn "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 vga_sync.ngc vga_sync.ngd  
+map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_sync_map.ncd vga_sync.ngd vga_sync.pcf 
+par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 vga_sync_map.ncd vga_sync.ncd vga_sync.pcf 
+trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_sync.twx vga_sync.ncd -o vga_sync.twr vga_sync.pcf 

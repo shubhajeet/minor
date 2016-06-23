@@ -53,9 +53,10 @@ class Maccon(object):
         self.xno = 0
         self.yno = 0
         try:
-            self.outImage = Image.new("RGB", self.inImage.size())
+            self.outImage = Image.new("L", self.inImage.size())
         except:
-            pass
+            print "could not create new Image"
+            sys.exit()
         self.pixr = self.inImage.load()
         self.pix2 = self.outImage.load()
         xmax, ymax = self.inImage.size()

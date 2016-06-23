@@ -1,0 +1,2 @@
+vhdl work "vga_sync.vhd"
+vhdl work "vga_test.vhd"
