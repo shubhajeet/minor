@@ -1,5 +1,5 @@
-set -tmpdir "/media/sujit/Windows/Users/sujit/Projects/minor/vga/xst/projnav.tmp"
-set -xsthdpdir "/media/sujit/Windows/Users/sujit/Projects/minor/vga/xst"
+set -tmpdir "C:/Users/sujit/Projects/minor/vga/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/sujit/Projects/minor/vga/xst"
 elaborate
 -ifn vga_sync.prj
 -ifmt mixed

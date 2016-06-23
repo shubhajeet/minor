@@ -37,6 +37,8 @@ entity vga_sync is
            vsync : out  STD_LOGIC;
            video_on : out  STD_LOGIC;
            p_tick : out  STD_LOGIC;
+		--	  h_count_out: out STD_LOGIC_VECTOR(9 downto 0);
+		--	  v_count_out: out STD_LOGIC_VECTOR(9 downto 0);
            pixel_x : out  STD_LOGIC_VECTOR (9 downto 0);
            pixel_y : out  STD_LOGIC_VECTOR (9 downto 0));
 end vga_sync;
@@ -51,6 +53,17 @@ architecture Behavioral of vga_sync is
 	constant VF: integer := 10;
 	constant VB: integer := 33;
 	constant VR: integer := 2;
+	
+	
+--	constant HD: integer := 7;
+--	constant HF: integer := 1;
+--	constant HB: integer := 1;
+--	constant HR: integer := 1;
+--	
+--	constant VD: integer := 2;
+--	constant VF: integer := 1;
+--	constant VB: integer := 1;
+--	constant VR: integer := 1;
 	-- mod -2 counter
 	signal mod2_reg, mod2_next: STD_LOGIC;
 	-- sync counters
@@ -88,6 +101,10 @@ begin
   h_end <=
     '1' when h_count_reg = (HD+HF+HB+HR-1)  else
     '0';
+
+v_end <= '1' when v_count_reg = (VD+VF+VB+VR-1)  else
+			'0';
+			
   process (h_count_reg,h_end,pixel_tick)
   begin
     if pixel_tick = '1' then
@@ -97,19 +114,36 @@ begin
         h_count_next <= h_count_reg + 1;
       end if;
     else
+      h_count_next <= h_count_reg;
+    end if;
+  end process;
+  
+    process (v_count_reg,v_end,h_end, pixel_tick)
+  begin
+    if pixel_tick = '1' and h_end = '1' then
+      if v_end = '1' then
+        v_count_next <= (others => '0');
+      else
+        v_count_next <= v_count_reg + 1;
+      end if;
+    else
       v_count_next <= v_count_reg;
     end if;
   end process;
+  
+  
   h_sync_next <= '0' when (h_count_reg >= (HD+HF)) and (h_count_reg <= (HD+HF+HR-1))
                  else '1';
   v_sync_next <= '0' when (v_count_reg >= (VD+VF)) and (v_count_reg <= (VD+VF+VR-1))
                  else '1';
   video_on <= '1' when (h_count_reg < HD) and (v_count_reg < VD) else
             '0';
+				
+ -- v_count_out <= std_logic_vector(v_count_reg);
+ -- h_count_out <= std_logic_vector(h_count_reg);  
   hsync <= h_sync_reg;
   vsync <= v_sync_reg;
   pixel_x <= std_logic_vector(h_count_reg);
   pixel_y <= std_logic_vector(v_count_reg);
   p_tick <= pixel_tick;
 end Behavioral;
-

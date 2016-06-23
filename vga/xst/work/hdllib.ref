@@ -1,4 +1,4 @@
-EN vga_sync NULL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl00 1466669807
-AR vga_test behavior C:/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl03 1466669810
-EN vga_test NULL C:/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl02 1466669809
-AR vga_sync behavioral C:/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl01 1466669808
+EN vga_sync NULL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl00 1466675847
+AR vga_test behavior C:/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl03 1466675850
+EN vga_test NULL C:/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl02 1466675849
+AR vga_sync behavioral C:/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl01 1466675848

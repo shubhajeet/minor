@@ -1,4 +1,3 @@
---------------------------------------------------------------------------------
 -- Company: 
 -- Engineer:
 --
@@ -37,6 +36,8 @@ ENTITY vga_test IS
 		clk, reset: in STD_LOGIC;
 		sw: in std_logic_vector(2 downto 0);
 		hsync, vsync: out STD_LOGIC;
+		--	  h_count_out: out STD_LOGIC_VECTOR(9 downto 0);
+		--	  v_count_out: out STD_LOGIC_VECTOR(9 downto 0);
 		rgb: out std_logic_vector(2 downto 0)
 		);
 END vga_test;
@@ -54,12 +55,13 @@ ARCHITECTURE behavior OF vga_test IS
          vsync : OUT  std_logic;
          video_on : OUT  std_logic;
          p_tick : OUT  std_logic;
+			--			  h_count_out: out STD_LOGIC_VECTOR(9 downto 0);
+			--  v_count_out: out STD_LOGIC_VECTOR(9 downto 0);
          pixel_x : OUT  std_logic_vector(9 downto 0);
          pixel_y : OUT  std_logic_vector(9 downto 0)
         );
     END COMPONENT;
     -- Clock period definitions
-   constant clk_period : time := 10 ns;
  
 BEGIN
  
@@ -70,6 +72,8 @@ BEGIN
           hsync => hsync,
           vsync => vsync,
           video_on => video_on,
+		--	 h_count_out => h_count_out,
+		--	 v_count_out => v_count_out,
           p_tick => open,
           pixel_x => open,
           pixel_y => open
@@ -85,4 +89,4 @@ BEGIN
 
    end process;
 	rgb <= rgb_reg when video_on = '1' else "000";
-END;
+end behavior;

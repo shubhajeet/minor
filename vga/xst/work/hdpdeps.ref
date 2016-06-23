@@ -1,14 +1,14 @@
 V3 9
 FL /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd 2016/06/23.06:39:25 O.87xd
 FL /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.vhd 2016/06/23.07:02:10 O.87xd
-FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd 2016/06/23.13:59:54 O.87xd
-EN work/vga_sync 1466669807 FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd \
+FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd 2016/06/23.15:42:22 O.87xd
+EN work/vga_sync 1466675847 FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
-AR work/vga_sync/Behavioral 1466669808 \
-      FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd EN work/vga_sync 1466669807
-FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd 2016/06/23.14:00:29 O.87xd
-EN work/vga_test 1466669809 FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd \
+AR work/vga_sync/Behavioral 1466675848 \
+      FL C:/Users/sujit/Projects/minor/vga/vga_sync.vhd EN work/vga_sync 1466675847
+FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd 2016/06/23.15:19:12 O.87xd
+EN work/vga_test 1466675849 FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd \
       PB ieee/std_logic_1164 1325952872
-AR work/vga_test/behavior 1466669810 \
-      FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd EN work/vga_test 1466669809 \
+AR work/vga_test/behavior 1466675850 \
+      FL C:/Users/sujit/Projects/minor/vga/vga_test.vhd EN work/vga_test 1466675849 \
       CP vga_sync

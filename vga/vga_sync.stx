@@ -1,36 +1,33 @@
-Release 13.4 - xst O.87xd (lin64)
+Release 13.4 - xst O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to /media/sujit/Windows/Users/sujit/Projects/minor/vga/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/sujit/Projects/minor/vga/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
---> 
-Parameter xsthdpdir set to /media/sujit/Windows/Users/sujit/Projects/minor/vga/xst
+--> Parameter xsthdpdir set to C:/Users/sujit/Projects/minor/vga/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.11 secs
  
---> 
-WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd" in Library work.
-Architecture behavioral of Entity vga_sync is up to date.
+Compiling vhdl file "C:/Users/sujit/Projects/minor/vga/vga_sync.vhd" in Library work.
+Entity <vga_sync> compiled.
+Entity <vga_sync> (Architecture <behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 
-
-Total memory usage is 476416 kilobytes
+Total memory usage is 255160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
