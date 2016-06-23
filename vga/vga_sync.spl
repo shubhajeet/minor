@@ -1,0 +1,11 @@
+[Inputs]
+clk
+reset
+[Outputs]
+hsync
+vsync
+video_on
+p_tick
+=pixel_x[9:0]=
+=pixel_y[9:0]=
+[BiDir]

@@ -1,4 +1,4 @@
-EN vga_sync NULL /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl00 1466644635
+EN vga_sync NULL /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl00 1466686239
 AR vga_test behavior /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl03 1466644638
 EN vga_test NULL /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_test.vhd sub00/vhpl02 1466644637
-AR vga_sync behavioral /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl01 1466644636
+AR vga_sync behavioral /media/sujit/Windows/Users/sujit/Projects/minor/vga/vga_sync.vhd sub00/vhpl01 1466686240

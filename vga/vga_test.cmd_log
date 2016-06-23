@@ -5,3 +5,9 @@ map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filte
 par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
 trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf 
 bitgen -filter "iseconfig/filter.filter" -intstyle ise -f vga_test.ut vga_test.ncd 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 vga_test.ngc vga_test.ngd  
+map -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -filter /media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf 
+netgen -filter "/media/sujit/Windows/Users/sujit/Projects/minor/vga/iseconfig/filter.filter" -intstyle ise -ar Structure -tm vga_test -w -dir netgen/synthesis -ofmt vhdl -sim vga_test.ngc vga_test_synthesis.vhd 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f vga_test.ut vga_test.ncd 
