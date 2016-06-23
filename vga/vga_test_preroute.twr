@@ -4,10 +4,10 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
 C:/Users/sujit/Projects/minor/vga/iseconfig/filter.filter -intstyle ise -v 3 -s
-4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf
--ucf vga_cons.ucf
+4 -n 3 -fastpaths -xml vga_test_preroute.twx vga_test_map.ncd -o
+vga_test_preroute.twr vga_test.pcf -ucf vga_cons.ucf
 
-Design file:              vga_test.ncd
+Design file:              vga_test_map.ncd
 Physical constraint file: vga_test.pcf
 Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2012-01-07)
 Report level:             verbose report
@@ -22,6 +22,9 @@ INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
    unconstrained paths section(s) of the report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
 INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
    a 50 Ohm transmission line loading model.  For the details of this model, 
    and for more information on accounting for different loading conditions, 
@@ -46,9 +49,9 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-sw<0>       |    4.678(R)|   -0.805(R)|clk_BUFGP         |   0.000|
-sw<1>       |    4.659(R)|   -0.783(R)|clk_BUFGP         |   0.000|
-sw<2>       |    4.667(R)|   -0.793(R)|clk_BUFGP         |   0.000|
+sw<0>       |    4.658(R)|   -0.821(R)|clk_BUFGP         |   0.000|
+sw<1>       |    4.658(R)|   -0.821(R)|clk_BUFGP         |   0.000|
+sw<2>       |    4.658(R)|   -0.821(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -56,11 +59,11 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-hsync       |    8.223(R)|clk_BUFGP         |   0.000|
-rgb<0>      |   10.479(R)|clk_BUFGP         |   0.000|
-rgb<1>      |   10.779(R)|clk_BUFGP         |   0.000|
-rgb<2>      |   10.538(R)|clk_BUFGP         |   0.000|
-vsync       |    8.742(R)|clk_BUFGP         |   0.000|
+hsync       |    6.978(R)|clk_BUFGP         |   0.000|
+rgb<0>      |    8.586(R)|clk_BUFGP         |   0.000|
+rgb<1>      |    8.586(R)|clk_BUFGP         |   0.000|
+rgb<2>      |    8.586(R)|clk_BUFGP         |   0.000|
+vsync       |    6.978(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -68,11 +71,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.836|         |         |         |
+clk            |    2.332|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Jun 23 14:02:20 2016 
+Analysis completed Thu Jun 23 14:04:32 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

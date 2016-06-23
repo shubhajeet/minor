@@ -11,7 +11,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Jun 23 13:45:36 2016
+Mapped Date    : Thu Jun 23 14:02:02 2016
 
 Design Summary
 --------------
@@ -23,9 +23,9 @@ Logic Utilization:
     Number used as Latches:              19
   Number of 4 input LUTs:                24 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             35 out of   4,656    1%
-    Number of Slices containing only related logic:      35 out of      35 100%
-    Number of Slices containing unrelated logic:          0 out of      35   0%
+  Number of occupied Slices:             34 out of   4,656    1%
+    Number of Slices containing only related logic:      34 out of      34 100%
+    Number of Slices containing unrelated logic:          0 out of      34   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
   Total Number of 4 input LUTs:          33 out of   9,312    1%
     Number used as logic:                24
@@ -41,8 +41,8 @@ Logic Distribution:
 Average Fanout of Non-Clock Nets:                2.10
 
 Peak Memory Usage:  288 MB
-Total REAL time to MAP completion:  10 secs 
-Total CPU time to MAP completion:   2 secs 
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 

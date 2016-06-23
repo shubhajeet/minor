@@ -100,10 +100,10 @@ begin
       v_count_next <= v_count_reg;
     end if;
   end process;
-  h_sync_next <= '1' when (h_count_reg >= (HD+HF)) and (h_count_reg <= (HD+HF+HR-1))
-                 else '0';
-  v_sync_next <= '1' when (v_count_reg >= (VD+VF)) and (v_count_reg <= (VD+VF+VR-1))
-                 else '0';
+  h_sync_next <= '0' when (h_count_reg >= (HD+HF)) and (h_count_reg <= (HD+HF+HR-1))
+                 else '1';
+  v_sync_next <= '0' when (v_count_reg >= (VD+VF)) and (v_count_reg <= (VD+VF+VR-1))
+                 else '1';
   video_on <= '1' when (h_count_reg < HD) and (v_count_reg < VD) else
             '0';
   hsync <= h_sync_reg;
