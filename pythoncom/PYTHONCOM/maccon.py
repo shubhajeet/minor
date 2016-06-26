@@ -24,7 +24,7 @@ ethertype > 0x6000
 """
 
 class Maccon(object):
-    cropsize = (22,22)
+    cropsize = (10,10)
     imgFormat = "RGB"
     def __init__(self, interface = "enp3s0", dst = "\x00\x01\x02\x03\x05\x06", configfile = "conf.ini"):
         """
@@ -53,14 +53,14 @@ class Maccon(object):
         self.xno = 0
         self.yno = 0
         try:
-            self.outImage = Image.new("L", self.inImage.size())
+            self.outImage = Image.new("L", self.inImage.size)
         except:
             print "could not create new Image"
             sys.exit()
         self.pixr = self.inImage.load()
         self.pix2 = self.outImage.load()
-        xmax, ymax = self.inImage.size()
-        xc, yc = cropsize
+        xmax, ymax = self.inImage.size
+        xc, yc = Maccon.cropsize
         pacx, pacy = 0 , 0
         xp, yp = xmax / xc, ymax/yc
         for pacx in range(0,xp):
