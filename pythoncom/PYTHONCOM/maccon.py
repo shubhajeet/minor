@@ -26,6 +26,7 @@ ethertype > 0x6000
 class Maccon(object):
     cropsize = (10,10)
     imgFormat = "RGB"
+    outImgFormat = "L"
     def __init__(self, interface = "enp3s0", dst = "\x00\x01\x02\x03\x05\x06", configfile = "conf.ini"):
         """
         initialization of the socket
@@ -68,7 +69,7 @@ class Maccon(object):
                 payload = ""
                 for x in range(pacx*xc,(pacx+1)*xc):
                     for y in range(pacy*yc,(pacy+1)*yc):
-                        payload = payload + "\X%X\X%X\X%X" % self.pixr[x,y]
+                        payload = payload + "%c%c%c" % self.pixr[x,y]
                 self.send(payload)
                 rpayload = self.receive()
                 for x in range(pacx*xc,(pacx+1)*xc):
