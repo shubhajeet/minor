@@ -1,2 +1,1 @@
-vhdl work "/media/sujit/Windows/Users/sujit/Projects/minor/uart/mod_m_Counter.vhd"
-vhdl work "/media/sujit/Windows/Users/sujit/Projects/minor/uart/uart_rx.vhd"
+vhdl work "C:\Users\user\FPGA\uart\receiver.vhd"

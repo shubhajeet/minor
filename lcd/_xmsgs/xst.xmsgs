@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/sujit/Projects/minor/lcd/lcd.vhd</arg>&quot; Line <arg fmt="%d" index="2">340</arg>. <arg fmt="%s" index="3">parse error, unexpected IF, expecting CASE</arg>
+</msg>
+
 </messages>
 

@@ -1,2 +1,1 @@
-vhdl work "mod_m_Counter.vhd"
-vhdl work "uart_rx.vhd"
+vhdl work "receiver.vhd"

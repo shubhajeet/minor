@@ -74,7 +74,9 @@ class Maccon(object):
                 rpayload = self.receive()
                 for x in range(pacx*xc,(pacx+1)*xc):
                     for y in range(pacy*yc,(pacy+1)*yc):
-                        format = "\X"*xmax*ymax
+                        format = "B"*(xmax*ymax*3)
+                        print format
+                        print xmax*ymax
                         pixgot = struct.unpack(format,payload)
                         #decoding the packet
         #when all the files have been recieved

@@ -1,0 +1,5 @@
+vhdtdtfi -prj lcd -o C:/Users/sujit/Projects/minor/lcd/lcd.vhi -module lcd -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work lcd.vhd 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+netgen -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -intstyle ise -ar Structure -tm lcd -w -dir netgen/synthesis -ofmt vhdl -sim lcd.ngc lcd_synthesis.vhd 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
