@@ -335,8 +335,62 @@ begin
 				init_state<=three;
 				i <= i + 1;
 			end if;
-		when four =>
-			LCD_E1 <= '0';
+	when four =>
+LCD_E1 <= '0';
+init_done <= '0';
+if(i = 5000) then
+init_state<=five;
+i <= 0;
+else
+init_state<=four;
+i <= i + 1;
+end if;
+when five =>
+SF_D1 <= "0011";
+LCD_E1 <= '1';
+init_done <= '0';
+if(i = 11) then
+init_state<=six;
+i <= 0;
+else
+init_state<=five;
+i <= i + 1;
+end if;
+when six =>
+LCD_E1 <= '0';
+init_done <= '0';
+if(i = 2000) then
+init_state<=seven;
+i <= 0;
+else
+init_state<=six;
+i <= i + 1;
+end if;
+when seven =>
+SF_D1 <= "0010";
+LCD_E1 <= '1';
+init_done <= '0';
+if(i = 11) then
+init_state<=eight;
+i <= 0;
+else
+init_state<=seven;
+i <= i + 1;
+end if;
+when eight =>
+LCD_E1 <= '0';
+init_done <= '0';
+if(i = 2000) then
+init_state<=done;
+i <= 0;
+else
+init_state<=eight;
+i <= i + 1;
+end if;
+when done =>
+init_state <= done;
+init_done <= '1';
+end case;	
 	end if;
 end process power_on_initialize;
 

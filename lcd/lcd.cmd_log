@@ -3,3 +3,20 @@ xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.fi
 netgen -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -intstyle ise -ar Structure -tm lcd -w -dir netgen/synthesis -ofmt vhdl -sim lcd.ngc lcd_synthesis.vhd 
 xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
 xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+xst -intstyle ise -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -ifn "C:/Users/sujit/Projects/minor/lcd/lcd.xst" -ofn "C:/Users/sujit/Projects/minor/lcd/lcd.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s500e-fg320-4 lcd.ngc lcd.ngd  
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s500e-fg320-4 lcd.ngc lcd.ngd  
+map -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lcd_map.ncd lcd.ngd lcd.pcf 
+par -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 lcd_map.ncd lcd.ncd lcd.pcf 
+trce -filter C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lcd.twx lcd.ncd -o lcd.twr lcd.pcf -ucf cons.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f lcd.ut lcd.ncd 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s500e-fg320-4 lcd.ngc lcd.ngd  
+map -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lcd_map.ncd lcd.ngd lcd.pcf 
+par -filter "C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 lcd_map.ncd lcd.ncd lcd.pcf 
+trce -filter C:/Users/sujit/Projects/minor/lcd/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lcd.twx lcd.ncd -o lcd.twr lcd.pcf -ucf cons.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f lcd.ut lcd.ncd 

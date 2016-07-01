@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -105,12 +105,391 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/sujit/Projects/minor/lcd/lcd.vhd" in Library work.
-ERROR:HDLParsers:164 - "C:/Users/sujit/Projects/minor/lcd/lcd.vhd" Line 340. parse error, unexpected IF, expecting CASE
+Entity <lcd> compiled.
+Entity <lcd> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lcd> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <lcd> in library <work> (Architecture <behavioral>).
+Entity <lcd> analyzed. Unit <lcd> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lcd>.
+    Related source file is "C:/Users/sujit/Projects/minor/lcd/lcd.vhd".
+    Found finite state machine <FSM_0> for signal <init_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 21                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | function_set                                   |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | done                                           |
+    | Power Up State     | done                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit register for signal <i>.
+    Found 20-bit adder for signal <i$share0000> created at line 287.
+    Found 11-bit register for signal <i2>.
+    Found 11-bit adder for signal <i2$share0000> created at line 208.
+    Found 17-bit register for signal <i3>.
+    Found 17-bit adder for signal <i3$addsub0000> created at line 155.
+    Found 1-bit register for signal <init_done>.
+    Found 1-bit register for signal <LCD_E0>.
+    Found 1-bit register for signal <LCD_E1>.
+    Found 4-bit register for signal <SF_D0>.
+    Found 4-bit register for signal <SF_D1>.
+    Summary:
+	inferred   3 Finite State Machine(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <lcd> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 3
+ 11-bit register                                       : 1
+ 17-bit register                                       : 1
+ 20-bit register                                       : 1
+ 4-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <tx_state/FSM> on signal <tx_state[1:7]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ high_setup | 0000100
+ high_hold  | 0000010
+ oneus      | 0001000
+ low_setup  | 0010000
+ low_hold   | 0100000
+ fortyus    | 1000000
+ done       | 0000001
+------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <cur_state/FSM> on signal <cur_state[1:12]> with one-hot encoding.
+------------------------------
+ State        | Encoding
+------------------------------
+ init         | 000000000001
+ function_set | 000000000010
+ entry_set    | 000000000100
+ set_display  | 000000001000
+ clr_display  | 000000010000
+ pause        | 000000100000
+ set_addr     | 000001000000
+ char_f       | 000010000000
+ char_p       | 000100000000
+ char_g       | 001000000000
+ char_a       | 010000000000
+ done         | 100000000000
+------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <init_state/FSM> on signal <init_state[1:11]> with one-hot encoding.
+--------------------------
+ State     | Encoding
+--------------------------
+ idle      | 00000000001
+ fifteenms | 00000000010
+ one       | 00000000100
+ two       | 00000001000
+ three     | 00000010000
+ four      | 00000100000
+ five      | 00001000000
+ six       | 00010000000
+ seven     | 00100000000
+ eight     | 01000000000
+ done      | 10000000000
+--------------------------
+WARNING:Xst:1293 - FF/Latch <SF_D1_2> has a constant value of 0 in block <lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <SF_D1_3> has a constant value of 0 in block <lcd>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 1
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <SF_D1_2> has a constant value of 0 in block <lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <SF_D1_3> has a constant value of 0 in block <lcd>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <lcd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lcd, actual ratio is 2.
+WARNING:Xst:1426 - The value init of the FF/Latch cur_state_FSM_FFd12 hinder the constant cleaning in the block lcd.
+   You should achieve better results by setting this init to 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 87
+ Flip-Flops                                            : 87
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lcd.ngr
+Top Level Output File Name         : lcd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 305
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 46
+#      LUT2                        : 20
+#      LUT2_D                      : 1
+#      LUT3                        : 21
+#      LUT3_D                      : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 94
+#      LUT4_D                      : 10
+#      LUT4_L                      : 2
+#      MUXCY                       : 50
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 87
+#      FDC                         : 20
+#      FDCE                        : 8
+#      FDE                         : 56
+#      FDP                         : 2
+#      FDPE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 1
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      109  out of   4656     2%  
+ Number of Slice Flip Flops:             87  out of   9312     0%  
+ Number of 4 input LUTs:                202  out of   9312     2%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 87    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 31    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.042ns (Maximum Frequency: 110.595MHz)
+   Minimum input arrival time before clock: 5.009ns
+   Maximum output required time after clock: 6.123ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.042ns (frequency: 110.595MHz)
+  Total number of paths / destination ports: 4647 / 94
+-------------------------------------------------------------------------
+Delay:               9.042ns (Levels of Logic = 6)
+  Source:            i_17 (FF)
+  Destination:       i_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_17 to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.591   0.762  i_17 (i_17)
+     LUT4:I0->O            1   0.704   0.424  init_state_cmp_eq00011_SW0_SW0 (N34)
+     LUT4:I3->O            3   0.704   0.535  init_state_cmp_eq00011 (N7)
+     LUT4:I3->O            3   0.704   0.610  init_state_cmp_eq0003 (init_state_cmp_eq0003)
+     LUT4:I1->O            1   0.704   0.499  i_mux0001<0>145 (i_mux0001<0>145)
+     LUT3_D:I1->O         19   0.704   1.089  i_mux0001<0>147 (N0)
+     LUT4:I3->O            1   0.704   0.000  i_mux0001<8>1 (i_mux0001<8>)
+     FDE:D                     0.308          i_11
+    ----------------------------------------
+    Total                      9.042ns (5.123ns logic, 3.919ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 56 / 56
+-------------------------------------------------------------------------
+Offset:              5.009ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       SF_D0_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to SF_D0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.218   1.262  reset_IBUF (reset_IBUF)
+     INV:I->O             56   0.704   1.270  reset_inv1_INV_0 (reset_inv)
+     FDE:CE                    0.555          SF_D0_0
+    ----------------------------------------
+    Total                      5.009ns (2.477ns logic, 2.532ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 37 / 14
+-------------------------------------------------------------------------
+Offset:              6.123ns (Levels of Logic = 2)
+  Source:            cur_state_FSM_FFd12 (FF)
+  Destination:       LCD_E (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cur_state_FSM_FFd12 to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.591   1.136  cur_state_FSM_FFd12 (cur_state_FSM_FFd12)
+     LUT2:I0->O            1   0.704   0.420  SF_D<3>1 (SF_D_3_OBUF)
+     OBUF:I->O                 3.272          SF_D_3_OBUF (SF_D<3>)
+    ----------------------------------------
+    Total                      6.123ns (4.567ns logic, 1.556ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.91 secs
+ 
 --> 
 
-Total memory usage is 281520 kilobytes
+Total memory usage is 302484 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

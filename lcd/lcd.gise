@@ -23,30 +23,67 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lcd.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="lcd.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="lcd.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="lcd.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="lcd.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="lcd.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="lcd.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="lcd.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="lcd.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="lcd.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="lcd.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="lcd.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="lcd.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="lcd.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="lcd.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="lcd.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="lcd.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="lcd.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="lcd.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="lcd.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lcd.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="lcd.vhi"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="lcd.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="lcd.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="lcd_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="lcd_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="lcd_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="lcd_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="lcd_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="lcd_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lcd_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lcd_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="lcd_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="lcd_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lcd_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="lcd_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="lcd_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="lcd_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="lcd_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lcd_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
-    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/lcd_synthesis.nlf"/>
-    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/lcd_synthesis.vhd"/>
+    <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/lcd_synthesis.nlf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/lcd_synthesis.vhd"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1467008594" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1467008594">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1467008594" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8560412736528835960" xil_pn:start_ts="1467008594">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -72,15 +109,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1467011332" xil_pn:in_ck="143473321795" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4755795094868788399" xil_pn:start_ts="1467011328">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1467071636" xil_pn:in_ck="143473321795" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-2123767241859686853" xil_pn:start_ts="1467071624">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="lcd.lso"/>
       <outfile xil_pn:name="lcd.ngc"/>
       <outfile xil_pn:name="lcd.ngr"/>
       <outfile xil_pn:name="lcd.prj"/>
+      <outfile xil_pn:name="lcd.stx"/>
       <outfile xil_pn:name="lcd.syr"/>
       <outfile xil_pn:name="lcd.xst"/>
       <outfile xil_pn:name="lcd_vhdl.prj"/>
@@ -88,22 +129,84 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1467011333" xil_pn:in_ck="4367021857311" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6918426312706280299" xil_pn:start_ts="1467011332">
+    <transform xil_pn:end_ts="1467072288" xil_pn:in_ck="4367021857311" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6918426312706280299" xil_pn:start_ts="1467072288">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
+    <transform xil_pn:end_ts="1467072295" xil_pn:in_ck="6471045609291114072" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="9211576110650519275" xil_pn:start_ts="1467072288">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="lcd.bld"/>
+      <outfile xil_pn:name="lcd.ngd"/>
+      <outfile xil_pn:name="lcd_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1467072299" xil_pn:in_ck="6471045609291114073" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1467072295">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="lcd.pcf"/>
+      <outfile xil_pn:name="lcd_map.map"/>
+      <outfile xil_pn:name="lcd_map.mrp"/>
+      <outfile xil_pn:name="lcd_map.ncd"/>
+      <outfile xil_pn:name="lcd_map.ngm"/>
+      <outfile xil_pn:name="lcd_map.xrpt"/>
+      <outfile xil_pn:name="lcd_summary.xml"/>
+      <outfile xil_pn:name="lcd_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1467072322" xil_pn:in_ck="8197449861260917234" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1467072299">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="lcd.ncd"/>
+      <outfile xil_pn:name="lcd.pad"/>
+      <outfile xil_pn:name="lcd.par"/>
+      <outfile xil_pn:name="lcd.ptwx"/>
+      <outfile xil_pn:name="lcd.unroutes"/>
+      <outfile xil_pn:name="lcd.xpi"/>
+      <outfile xil_pn:name="lcd_pad.csv"/>
+      <outfile xil_pn:name="lcd_pad.txt"/>
+      <outfile xil_pn:name="lcd_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1467072328" xil_pn:in_ck="143473312918" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1467072322">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="lcd.bgn"/>
+      <outfile xil_pn:name="lcd.bit"/>
+      <outfile xil_pn:name="lcd.drc"/>
+      <outfile xil_pn:name="lcd.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1467072332" xil_pn:in_ck="143473300064" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1467072328">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467072322" xil_pn:in_ck="6471045609291113941" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1467072319">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="lcd.twr"/>
+      <outfile xil_pn:name="lcd.twx"/>
+    </transform>
     <transform xil_pn:name="TRAN_preRouteTrce">
       <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1467008676" xil_pn:in_ck="143473313049" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="4887169325861968130" xil_pn:start_ts="1467008671">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="netgen"/>
       <outfile xil_pn:name="netgen/synthesis/lcd_synthesis.nlf"/>
       <outfile xil_pn:name="netgen/synthesis/lcd_synthesis.vhd"/>

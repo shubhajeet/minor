@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-06-27T11:59:54</DateModified>
+  <DateModified>2016-06-28T06:20:59</DateModified>
   <ModuleName>lcd</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/sujit/Projects/minor/lcd/iseconfig/lcd.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/sujit/Projects/minor/lcd</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/sujit/Projects/minor/lcd\</ImplementationReportsDirectory>
   <DateInitialized>2016-06-27T11:59:54</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>
