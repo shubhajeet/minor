@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/ram_sequencer.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/ram_sequencer.syr" 

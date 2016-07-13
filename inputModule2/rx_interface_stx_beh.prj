@@ -1,0 +1,4 @@
+vhdl isim_temp "uart_interf.vhd"
+vhdl isim_temp "receiver.vhd"
+vhdl isim_temp "baud_rate_generator.vhd"
+vhdl isim_temp "rx_interface.vhd"

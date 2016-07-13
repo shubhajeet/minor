@@ -1,0 +1,4 @@
+vhdl work "uart_interf.vhd"
+vhdl work "receiver.vhd"
+vhdl work "baud_rate_generator.vhd"
+vhdl work "rx_interface.vhd"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test_isim_beh.exe" -prj "C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test_beh.prj" "work.sam_in_mem_test" 

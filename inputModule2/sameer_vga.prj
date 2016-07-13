@@ -1,0 +1,3 @@
+vhdl work "vga_sync.vhd"
+vhdl work "out_buf.vhd"
+vhdl work "sameer_vga.vhd"

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\user\FPGA\uart0.0\inputModule2\sameer_in_mem.ncd
+OUTFILE=C:\Users\user\FPGA\uart0.0\inputModule2\sameer_in_mem.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\user\FPGA\uart0.0\inputModule2
+LICENSE=WebPack
+USER_INFO=211019507_0_0_750

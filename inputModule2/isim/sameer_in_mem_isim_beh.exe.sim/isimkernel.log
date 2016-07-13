@@ -1,0 +1,29 @@
+Command line:
+   sameer_in_mem_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56611
+
+Fri Jul 01 23:21:10 2016
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 368.882 Meg
+
+ Total Signals          : 162
+ Total Nets             : 12712
+ Total Signal Drivers   : 77
+ Total Blocks           : 13
+ Total Primitive Blocks : 9
+ Total Processes        : 53
+ Total Traceable Variables  : 45
+ Total Scalar Nets and Variables : 13235
+Total Line Count : 171
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 368.882 Meg
+
+Fri Jul 01 23:21:14 2016
+
