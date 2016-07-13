@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/user/FPGA/ddram/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/user/FPGA/ddram/xst"
+elaborate
+-ifn state_init.prj
+-ifmt mixed

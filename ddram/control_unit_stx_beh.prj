@@ -1,0 +1,3 @@
+vhdl isim_temp "state_init.vhd"
+vhdl isim_temp "dcm_clk.vhd"
+vhdl isim_temp "control_sameer.vhd"

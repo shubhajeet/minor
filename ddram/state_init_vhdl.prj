@@ -1,0 +1,3 @@
+vhdl work "C:\Users\user\FPGA\ddram\state_init.vhd"
+vhdl work "C:\Users\user\FPGA\ddram\state_machine_unit.vhd"
+vhdl work "C:\Users\user\FPGA\ddram\control_unit_ddr.vhd"

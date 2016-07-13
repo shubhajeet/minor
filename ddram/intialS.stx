@@ -1,0 +1,74 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/user/FPGA/ddram/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/user/FPGA/ddram/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/user/FPGA/ddram/intialS.vhd" in Library work.
+Entity <initialS> compiled.
+ERROR:HDLParsers:3010 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 44. Entity intialS does not exist.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 48. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 48. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 50. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 50. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 54. Undefined symbol 'sys_clk'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 54. sys_clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 54. Undefined symbol 'reset'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 54. reset: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 56. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 58. Undefined symbol 'cke_reg'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 59. Undefined symbol 'n_count_reg'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 61. Undefined symbol 'clk'.
+ERROR:HDLParsers:808 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 61. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 63. cke_reg: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 63. Undefined symbol 'cke_next'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 63. cke_next: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 64. n_count_reg: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 64. Undefined symbol 'n_count_next'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 64. n_count_next: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 54. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 71. Undefined symbol 'n_count_reg'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 71. n_count_reg: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 79. Undefined symbol 'cas_n'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 80. Undefined symbol 'ras_n'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 81. Undefined symbol 'we_n'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 84. Undefined symbol 'cke_next'.
+ERROR:HDLParsers:808 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 85. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 88. + can not have such operands in this context.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 92. cke_next: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 93. cas_n: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 94. ras_n: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 95. we_n: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 106. Undefined symbol 'ck'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 106. Undefined symbol 'sys_clk'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 106. sys_clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 107. Undefined symbol 'ck_n'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 108. Undefined symbol 'cke'.
+ERROR:HDLParsers:3312 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 108. Undefined symbol 'cke_reg'.
+ERROR:HDLParsers:1209 - "C:/Users/user/FPGA/ddram/intialS.vhd" Line 108. cke_reg: Undefined symbol (last report in this block)
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.40 secs
+ 
+--> 
+
+Total memory usage is 173252 kilobytes
+
+Number of errors   :   39 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

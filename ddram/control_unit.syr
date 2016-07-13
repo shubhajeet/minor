@@ -1,0 +1,578 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.42 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.42 secs
+ 
+--> Reading design: control_unit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "control_unit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "control_unit"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : control_unit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/user/FPGA/ddram/dcm_clk.vhd" in Library work.
+Architecture behavioral of Entity dcm_clk is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/ddram/state_init.vhd" in Library work.
+Entity <state_init> compiled.
+Entity <state_init> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/user/FPGA/ddram/state_machine_unit.vhd" in Library work.
+Architecture behavioral of Entity state_mech is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" in Library work.
+Architecture behavioral of Entity control_unit is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <control_unit> in library <work> (architecture <behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 16
+
+Analyzing hierarchy for entity <dcm_clk> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <state_init> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 16
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <control_unit> in library <work> (Architecture <behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 16
+WARNING:Xst:753 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" line 99: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm_clk'.
+Entity <control_unit> analyzed. Unit <control_unit> generated.
+
+Analyzing Entity <dcm_clk> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm_clk>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm_clk>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm_clk>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  FIXED" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <dcm_clk>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <dcm_clk>.
+Entity <dcm_clk> analyzed. Unit <dcm_clk> generated.
+
+Analyzing generic Entity <state_init> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 16
+INFO:Xst:2679 - Register <cs_n> in unit <state_init> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <state_init> analyzed. Unit <state_init> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <state_init>.
+    Related source file is "C:/Users/user/FPGA/ddram/state_init.vhd".
+WARNING:Xst:2563 - Inout <data<0>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<5>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <clk_180> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <data<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <dqs_l> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<8>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <dqs_u> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<9>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<10>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<11>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <data<12>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<13>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<14>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <data<15>> is never assigned. Tied to value Z.
+WARNING:Xst:646 - Signal <col_count_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <col_count_next> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 27                                             |
+    | Transitions        | 29                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 27                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <locked_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ras_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 13-bit latch for signal <addr_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 2-bit latch for signal <addr_bank_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <cas_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <we_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <clk_en_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <clk_en>.
+    Found 13-bit register for signal <addr>.
+    Found 1-bit register for signal <we_n>.
+    Found 1-bit register for signal <ras_n>.
+    Found 1-bit tristate buffer for signal <dqs_l>.
+    Found 1-bit tristate buffer for signal <dqs_u>.
+    Found 2-bit register for signal <addr_bank>.
+    Found 1-bit register for signal <cas_n>.
+    Found 1-bit tristate buffer for signal <data<15>>.
+    Found 1-bit tristate buffer for signal <data<14>>.
+    Found 1-bit tristate buffer for signal <data<13>>.
+    Found 1-bit tristate buffer for signal <data<12>>.
+    Found 1-bit tristate buffer for signal <data<11>>.
+    Found 1-bit tristate buffer for signal <data<10>>.
+    Found 1-bit tristate buffer for signal <data<9>>.
+    Found 1-bit tristate buffer for signal <data<8>>.
+    Found 1-bit tristate buffer for signal <data<7>>.
+    Found 1-bit tristate buffer for signal <data<6>>.
+    Found 1-bit tristate buffer for signal <data<5>>.
+    Found 1-bit tristate buffer for signal <data<4>>.
+    Found 1-bit tristate buffer for signal <data<3>>.
+    Found 1-bit tristate buffer for signal <data<2>>.
+    Found 1-bit tristate buffer for signal <data<1>>.
+    Found 1-bit tristate buffer for signal <data<0>>.
+    Found 14-bit up counter for signal <n_count_reg>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred  18 Tristate(s).
+Unit <state_init> synthesized.
+
+
+Synthesizing Unit <dcm_clk>.
+    Related source file is "C:/Users/user/FPGA/ddram/dcm_clk.vhd".
+Unit <dcm_clk> synthesized.
+
+
+Synthesizing Unit <control_unit>.
+    Related source file is "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd".
+Unit <control_unit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Registers                                            : 6
+ 1-bit register                                        : 4
+ 13-bit register                                       : 1
+ 2-bit register                                        : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 6
+ 13-bit latch                                          : 1
+ 2-bit latch                                           : 1
+# Tristates                                            : 18
+ 1-bit tristate buffer                                 : 18
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_state_init/state_reg/FSM> on signal <state_reg[1:27]> with one-hot encoding.
+------------------------------------------------
+ State           | Encoding
+------------------------------------------------
+ idle            | 000000000000000000000000001
+ counting        | 000000000000000000000000010
+ precharge1      | 000000000000000000000000100
+ nop_state1      | 000000000000000000000001000
+ wait_state1     | 000000000000000000000010000
+ mode_reg_state1 | 000000000000000000000100000
+ nop_state2      | 000000000000000000001000000
+ mode_reg_state2 | 000000000000000000010000000
+ nop_state3      | 000000000000000000100000000
+ precharge2      | 000000000000000001000000000
+ nop_state4      | 000000000000000010000000000
+ wait_state4     | 000000000000000100000000000
+ auto_refresh    | 000000000000001000000000000
+ nop_state5      | 000000000000010000000000000
+ wait_state5     | 000000000000100000000000000
+ wait_state6     | 000000000001000000000000000
+ wait_state7     | 000000000010000000000000000
+ auto_refresh2   | 000000000100000000000000000
+ nop_state6      | 000000001000000000000000000
+ wait_state9     | 000000010000000000000000000
+ wait_state10    | 000000100000000000000000000
+ wait_state11    | 000001000000000000000000000
+ mode_reg_state3 | 000010000000000000000000000
+ nop_state7      | 000100000000000000000000000
+ active_state    | 001000000000000000000000000
+ nop_state8      | 010000000000000000000000000
+ stop            | 100000000000000000000000000
+------------------------------------------------
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block locked_reg.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_bank_1> (without init value) has a constant value of 0 in block <Inst_state_init>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Latches                                              : 8
+ 1-bit latch                                           : 6
+ 13-bit latch                                          : 1
+ 2-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <5> in Unit <LPM_LATCH_3> is equivalent to the following FF/Latch, which will be removed : <0> 
+INFO:Xst:2261 - The FF/Latch <12> in Unit <LPM_LATCH_3> is equivalent to the following 9 FFs/Latches, which will be removed : <11> <10> <9> <8> <6> <4> <3> <2> <1> 
+WARNING:Xst:1426 - The value init of the FF/Latch locked_reg hinder the constant cleaning in the block state_init.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <addr_bank_reg_1> (without init value) has a constant value of 0 in block <state_init>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_bank_1> (without init value) has a constant value of 0 in block <state_init>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Inst_state_init/addr_12> in Unit <control_unit> is equivalent to the following 9 FFs/Latches, which will be removed : <Inst_state_init/addr_11> <Inst_state_init/addr_10> <Inst_state_init/addr_9> <Inst_state_init/addr_8> <Inst_state_init/addr_6> <Inst_state_init/addr_4> <Inst_state_init/addr_3> <Inst_state_init/addr_2> <Inst_state_init/addr_1> 
+INFO:Xst:2261 - The FF/Latch <Inst_state_init/addr_5> in Unit <control_unit> is equivalent to the following FF/Latch, which will be removed : <Inst_state_init/addr_0> 
+
+Optimizing unit <control_unit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block control_unit, actual ratio is 1.
+FlipFlop Inst_state_init/addr_12 has been replicated 9 time(s) to handle iob=true attribute.
+FlipFlop Inst_state_init/addr_5 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : control_unit.ngr
+Top Level Output File Name         : control_unit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 56
+
+Cell Usage :
+# BELS                             : 115
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 13
+#      LUT2                        : 20
+#      LUT3                        : 3
+#      LUT4                        : 28
+#      LUT4_L                      : 1
+#      MUXCY                       : 30
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 14
+# FlipFlops/Latches                : 69
+#      FD                          : 18
+#      FDC                         : 25
+#      FDCE                        : 15
+#      FDPE                        : 1
+#      LD                          : 6
+#      LD_1                        : 4
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 55
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 35
+#      OBUFT                       : 18
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       47  out of   4656     1%  
+ Number of Slice Flip Flops:             50  out of   9312     0%  
+ Number of 4 input LUTs:                 68  out of   9312     0%  
+ Number of IOs:                          56
+ Number of bonded IOBs:                  55  out of    232    23%  
+    IOB Flip Flops:                      19
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+-----------------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)                   | Load  |
+-------------------------------------------------------------------------------------+-----------------------------------------+-------+
+Inst_state_init/addr_reg_or0000(Inst_state_init/addr_reg_or0000_wg_cy<5>:O)          | NONE(*)(Inst_state_init/addr_reg_12)    | 3     |
+clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK0           | 41    |
+Inst_state_init/addr_bank_reg_or0000(Inst_state_init/addr_bank_reg_or0000_wg_cy<5>:O)| NONE(*)(Inst_state_init/addr_bank_reg_0)| 1     |
+Inst_state_init/ras_reg_not0001(Inst_state_init/ras_reg_not00011:O)                  | NONE(*)(Inst_state_init/ras_reg)        | 3     |
+Inst_state_init/init_done_not0001(Inst_state_init/init_done_not00011:O)              | NONE(*)(Inst_state_init/init_done)      | 1     |
+Inst_state_init/clk_en_reg_not0001(Inst_state_init/clk_en_reg_not00011:O)            | NONE(*)(Inst_state_init/clk_en_reg)     | 1     |
+clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK90          | 18    |
+-------------------------------------------------------------------------------------+-----------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 41    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.442ns (Maximum Frequency: 183.756MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.442ns (frequency: 183.756MHz)
+  Total number of paths / destination ports: 370 / 54
+-------------------------------------------------------------------------
+Delay:               5.442ns (Levels of Logic = 3)
+  Source:            Inst_state_init/n_count_reg_5 (FF)
+  Destination:       Inst_state_init/n_count_reg_13 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_state_init/n_count_reg_5 to Inst_state_init/n_count_reg_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.706  Inst_state_init/n_count_reg_5 (Inst_state_init/n_count_reg_5)
+     LUT4:I0->O            1   0.704   0.499  Inst_state_init/state_reg_cmp_eq000018 (Inst_state_init/state_reg_cmp_eq000018)
+     LUT4:I1->O           17   0.704   1.226  Inst_state_init/state_reg_cmp_eq000054 (Inst_state_init/state_reg_cmp_eq0000)
+     LUT2:I0->O            1   0.704   0.000  Inst_state_init/Mcount_n_count_reg_eqn_121 (Inst_state_init/Mcount_n_count_reg_eqn_12)
+     FDCE:D                    0.308          Inst_state_init/n_count_reg_12
+    ----------------------------------------
+    Total                      5.442ns (3.011ns logic, 2.431ns route)
+                                       (55.3% logic, 44.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            Inst_state_init/n_count_reg_13 (FF)
+  Destination:       count_out<13> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_state_init/n_count_reg_13 to count_out<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.531  Inst_state_init/n_count_reg_13 (Inst_state_init/n_count_reg_13)
+     OBUF:I->O                 3.272          count_out_13_OBUF (count_out<13>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_state_init/init_done_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            Inst_state_init/init_done (LATCH)
+  Destination:       locked_out (PAD)
+  Source Clock:      Inst_state_init/init_done_not0001 falling
+
+  Data Path: Inst_state_init/init_done to locked_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  Inst_state_init/init_done (Inst_state_init/init_done)
+     OBUF:I->O                 3.272          locked_out_OBUF (locked_out)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.64 secs
+ 
+--> 
+
+Total memory usage is 204860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

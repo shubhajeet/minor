@@ -1,0 +1,5 @@
+vhdl work "state_init.vhd"
+vhdl work "dcm_clk.vhd"
+vhdl work "control_unit_ddr.vhd"
+vhdl work "control_test.vhd"
+vhdl work "state_machine_unit.vhd"
