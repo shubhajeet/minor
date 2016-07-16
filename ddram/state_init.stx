@@ -3,41 +3,37 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/user/FPGA/ddram/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.81 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.43 secs
  
 --> Parameter xsthdpdir set to C:/Users/user/FPGA/ddram/xst
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.82 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.43 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/control_unit is now defined in a different file.  It was defined in "C:/Users/user/FPGA/ddram/control_sameer.vhd", and is now defined in "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd".
-WARNING:HDLParsers:3607 - Unit work/control_unit/Behavioral is now defined in a different file.  It was defined in "C:/Users/user/FPGA/ddram/control_sameer.vhd", and is now defined in "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd".
 Compiling vhdl file "C:/Users/user/FPGA/ddram/state_init.vhd" in Library work.
 Entity <state_init> compiled.
 Entity <state_init> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" in Library work.
-Entity <control_unit> compiled.
-Entity <control_unit> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/user/FPGA/ddram/state_machine_unit.vhd" in Library work.
-Entity <state_mech> compiled.
-Entity <state_mech> (Architecture <Behavioral>) compiled.
+ERROR:HDLParsers:850 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" Line 117. Formal port we does not exist in Entity 'state_init'.
+ERROR:HDLParsers:850 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" Line 121. Formal port dqs_l does not exist in Entity 'state_init'.
+ERROR:HDLParsers:850 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" Line 122. Formal port dqs_u does not exist in Entity 'state_init'.
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.73 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.67 secs
  
 --> 
 
-Total memory usage is 173252 kilobytes
+Total memory usage is 172996 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -39,8 +39,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="control_unit.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="control_unit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="control_unit.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control_unit_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="control_unit_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="control_unit_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control_unit_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="control_unit_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control_unit_vhdl.prj"/>
@@ -64,6 +64,11 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="multiplexer.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="multiplexer.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="multiplexer.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="multiplexer_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="multiplexer_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="state_init.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="state_init.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="state_init.xst"/>
@@ -82,21 +87,24 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1468423263" xil_pn:in_ck="-1986425014205015663" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1468423263">
+    <transform xil_pn:end_ts="1468666709" xil_pn:in_ck="7692678395926948494" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1468666709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="control_test.vhd"/>
       <outfile xil_pn:name="control_unit_ddr.vhd"/>
+      <outfile xil_pn:name="multiplexer.vhd"/>
+      <outfile xil_pn:name="multiplexer_test.vhd"/>
+      <outfile xil_pn:name="read_write_unit.vhd"/>
       <outfile xil_pn:name="state_init.vhd"/>
       <outfile xil_pn:name="state_machine_unit.vhd"/>
       <outfile xil_pn:name="test_init.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1468423378" xil_pn:in_ck="3966791472326375386" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5799452089097241974" xil_pn:start_ts="1468423378">
+    <transform xil_pn:end_ts="1468664942" xil_pn:in_ck="3966791472326375386" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5799452089097241974" xil_pn:start_ts="1468664942">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="dcm_clk.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1468423378" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6698224366155508488" xil_pn:start_ts="1468423378">
+    <transform xil_pn:end_ts="1468664942" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6698224366155508488" xil_pn:start_ts="1468664942">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -104,17 +112,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1468423378" xil_pn:in_ck="-8720913202256074386" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1468423378">
+    <transform xil_pn:end_ts="1468666709" xil_pn:in_ck="-8151222818799958517" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1468666709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="control_test.vhd"/>
       <outfile xil_pn:name="control_unit_ddr.vhd"/>
       <outfile xil_pn:name="dcm_clk.vhd"/>
+      <outfile xil_pn:name="multiplexer.vhd"/>
+      <outfile xil_pn:name="multiplexer_test.vhd"/>
+      <outfile xil_pn:name="read_write_unit.vhd"/>
       <outfile xil_pn:name="state_init.vhd"/>
       <outfile xil_pn:name="state_machine_unit.vhd"/>
       <outfile xil_pn:name="test_init.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1468423406" xil_pn:in_ck="-8720913202256074386" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2092504638932614770" xil_pn:start_ts="1468423378">
+    <transform xil_pn:end_ts="1468666725" xil_pn:in_ck="-8151222818799958517" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2092504638932614770" xil_pn:start_ts="1468666709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="control_test_beh.prj"/>
@@ -124,7 +135,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1468423407" xil_pn:in_ck="-227086268908740656" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3162192131665117652" xil_pn:start_ts="1468423406">
+    <transform xil_pn:end_ts="1468666726" xil_pn:in_ck="2416943490717405801" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2099194005469755093" xil_pn:start_ts="1468666725">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="control_test_isim_beh.wdb"/>
@@ -160,7 +171,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1468423120" xil_pn:in_ck="-7140475590651355557" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4770744054912404456" xil_pn:start_ts="1468423096">
+    <transform xil_pn:end_ts="1468666580" xil_pn:in_ck="6077406376041611118" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4770744054912404456" xil_pn:start_ts="1468666559">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -173,7 +184,6 @@
       <outfile xil_pn:name="control_unit.stx"/>
       <outfile xil_pn:name="control_unit.syr"/>
       <outfile xil_pn:name="control_unit.xst"/>
-      <outfile xil_pn:name="control_unit_beh.prj"/>
       <outfile xil_pn:name="control_unit_stx_beh.prj"/>
       <outfile xil_pn:name="control_unit_vhdl.prj"/>
       <outfile xil_pn:name="control_unit_xst.xrpt"/>

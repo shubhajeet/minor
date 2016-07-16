@@ -4,10 +4,11 @@ Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/user/FPGA/ddram/state_init.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/ddram/read_write_unit.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/ddram/multiplexer.vhd" into library work
 Parsing VHDL file "C:/Users/user/FPGA/ddram/dcm_clk.vhd" into library work
 Parsing VHDL file "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" into library work
 Parsing VHDL file "C:/Users/user/FPGA/ddram/control_test.vhd" into library work
-Parsing VHDL file "C:/Users/user/FPGA/ddram/state_machine_unit.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -27,11 +28,13 @@ Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_c
 Compiling architecture dcm_sp_v of entity DCM_SP [\DCM_SP(true,"*",true,false,2.0,...]
 Compiling architecture behavioral of entity dcm_clk [dcm_clk_default]
 Compiling architecture behavioral of entity state_init [\state_init(13,16)\]
+Compiling architecture behavioral of entity read_write_unit [\read_write_unit(13,16)\]
+Compiling architecture behavioral of entity multiplexer [\multiplexer(13)\]
 Compiling architecture behavioral of entity control_unit [\control_unit(13,16)\]
 Compiling architecture behavior of entity control_test
 Time Resolution for simulation is 1ps.
-Waiting for 11 sub-compilation(s) to finish...
-Compiled 29 VHDL Units
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 33 VHDL Units
 Built simulation executable C:/Users/user/FPGA/ddram/control_test_isim_beh.exe
-Fuse Memory Usage: 53232 KB
-Fuse CPU Usage: 3921 ms
+Fuse Memory Usage: 53204 KB
+Fuse CPU Usage: 3234 ms

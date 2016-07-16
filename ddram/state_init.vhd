@@ -49,14 +49,13 @@ entity state_init is
 			  locked: in std_logic;												--marks start of 90 deg phase shifted clk when 0->1 transition
            reset : in  STD_LOGIC;
 			  
-			  we : in STD_LOGIC;													--controller function : write enable
+--			  we : in STD_LOGIC;													--controller function : write enable
 			  --output to ram
 			clk_en, cs_n : out std_logic;										--clk enable and chip select
-			dqs_l, dqs_u : inout std_logic;									--data strobe, lower and upper
+--			dqs_l, dqs_u : inout std_logic;									--data strobe, lower and upper
 			we_n, cas_n, ras_n: out std_logic;								--strobes: command signals
 			addr_bank: out std_logic_vector(1 downto 0);					--for 4 banks
-			addr: inout std_logic_vector(ADDR_WIDTH-1 downto 0);		--13 address lines for RA and 10 for CA
-			data : inout std_logic_vector(DATA_WIDTH-1 downto 0);		--Data Lines	  
+			addr: out std_logic_vector(ADDR_WIDTH-1 downto 0);		--13 address lines for RA and 10 for CA
 			
 			
 			--check status o/ps
@@ -74,8 +73,8 @@ architecture Behavioral of state_init is
 	type signal_state is (idle, counting, precharge1, nop_state1, wait_state1, mode_reg_state1, nop_state2,
 			mode_reg_state2, nop_state3, precharge2, nop_state4, wait_state4, auto_refresh, nop_state5,
 			wait_state5, wait_state6, wait_state7, auto_refresh2, nop_state6,
-			wait_state9, wait_state10, wait_state11, mode_reg_state3, nop_state7, active_state, 
-			nop_state8, stop);
+			wait_state9, wait_state10, wait_state11, active_state, 
+			nop_state8, wait_state_stop, stop);
 
 	signal state_reg, state_next: signal_state;
 	
@@ -120,7 +119,7 @@ begin
 		
 		
 	--initialization process	
-	process(cas_reg, ras_reg, we_reg, state_reg, locked_reg, addr_reg, n_count_reg)
+	process(state_reg, locked_reg, addr_reg, n_count_reg)
 	begin
 		
 			state_next <= state_reg;
@@ -139,7 +138,7 @@ begin
 			end if;
 			
 			when counting =>
-			if(n_count_reg = n_count_max -1) then			--after >200 us
+			if(n_count_reg = n_count_max) then				--after 10010 * 200 ns > 200 us
 					n_count_next <= (others => '0');			--reset counter
 					clk_en_reg <= '1';							--set clk_en high
 					state_next <= precharge1;					
@@ -165,8 +164,8 @@ begin
 
 
 			when mode_reg_state1 =>
-			addr_bank_reg <= "01";
-			addr_reg <= "0000000100001";		--control word
+			addr_bank_reg <= "01";				--extended mode to enable DLL in normal drive
+			addr_reg <= "0000000000000";		--all 0s, DLL enable should be followed by DLL reset
 			ras_reg <= '0';
 			cas_reg <= '0';
 			we_reg <= '0';
@@ -178,10 +177,10 @@ begin
 			we_reg <= '1';
 			state_next <= mode_reg_state2;	
 	
-			when mode_reg_state2 =>
-			addr_bank_reg <= "00";
-			addr_reg <= "0000010100001";		--control word, A8 = 1 for DLL reset
-			ras_reg <= '0';
+			when mode_reg_state2 =>				--normal/reset DLL operation
+			addr_bank_reg <= "00";				--control word, BL = 2, BT = Sequential, CL = 2 for normal operation
+			addr_reg <= "0000100100001";		--control word, M8 = 1 for DLL reset
+			ras_reg <= '0';						--wait 200 clock cycles until read command is issued
 			cas_reg <= '0';
 			we_reg <= '0';
 			state_next <= nop_state3;
@@ -250,23 +249,9 @@ begin
 			state_next <= wait_state11;
 			
 			when wait_state11 =>
-			state_next <= mode_reg_state3;
-
-			when mode_reg_state3 =>
-			addr_bank_reg <= "00";
-			addr_reg <= "0000010100001";		--control word, A8 = 1 for DLL reset
-			ras_reg <= '0';
-			cas_reg <= '0';
-			we_reg <= '0';
-			state_next <= nop_state7;
-		
-			when nop_state7 =>
-			cas_reg <= '1';
-			ras_reg <= '1';
-			we_reg <= '1';
 			state_next <= active_state;
 				
-			when active_state=>
+			when active_state=>						--selects row of bank 00 for read write, wait for 20 ns(min)
 			cas_reg <= '1';
 			ras_reg <= '0';
 			we_reg <= '1';
@@ -278,9 +263,10 @@ begin
 			cas_reg <= '1';
 			ras_reg <= '1';
 			we_reg <= '1';
-			state_next <= wait_state_stop;
+			state_next <= stop;
 	
 			when wait_state_stop =>
+			init_done <= '1';
 			state_next <= stop;
 			
 			when stop =>
@@ -289,9 +275,19 @@ begin
 		end case;		
 	end process;
 		
-		
-		
---	--read/write process
+--	--read/write process	
+--	process(init_done, col_count_reg, we)
+--	begin
+--		col_count_next <= col_count_reg;
+--		if(init_done = '1' and we = '1') then
+--			if(col_count_reg = "1111111111") then
+--				col_count_next <= (others => '0');
+--			else
+--				col_count_next <= col_count_reg + 1;
+--			end if;
+--		end if;
+--	end process;
+
 --	process(init_done, we, col_count_reg, ras_reg, cas_reg, we_reg, addr_reg, addr_bank_reg)
 --	begin
 --		if(init_done = '1' and we = '1') then

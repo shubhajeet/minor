@@ -1,1 +1,3 @@
-work	"dcm_clk.vhd"
+work	"control_unit_ddr.vhd"
+work	"multiplexer.vhd"
+work	"state_machine_unit.vhd"

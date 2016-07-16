@@ -52,7 +52,7 @@ ARCHITECTURE behavior OF control_test IS
 			dqs_l, dqs_u : inout std_logic;									--data strobe, lower and upper
 			we_n, cas_n, ras_n: out std_logic;								--strobes
 			addr_bank: out std_logic_vector(1 downto 0);					--for 4 banks
-			addr: inout std_logic_vector(ADDR_WIDTH-1 downto 0);		--13 address lines for RA and 10 for CA
+			addr: out std_logic_vector(ADDR_WIDTH-1 downto 0);		--13 address lines for RA and 10 for CA
 			data : inout std_logic_vector(DATA_WIDTH-1 downto 0);		--Data Lines	
 			we : in std_logic;
 			
@@ -81,6 +81,7 @@ ARCHITECTURE behavior OF control_test IS
    -- Clock period definitions
    constant clk_period : time := 20 ns;
    constant clk_0_period : time := 20 ns;
+ 
  
 BEGIN
  

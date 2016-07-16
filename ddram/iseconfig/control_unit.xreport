@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-07-13T20:57:57</DateModified>
+  <DateModified>2016-07-16T16:38:32</DateModified>
   <ModuleName>control_unit</ModuleName>
-  <SummaryTimeStamp>2016-07-01T21:26:34</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-07-16T16:09:32</SummaryTimeStamp>
   <SavedFilePath>C:/Users/user/FPGA/ddram/iseconfig/control_unit.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/user/FPGA/ddram\</ImplementationReportsDirectory>
   <DateInitialized>2016-07-01T21:25:15</DateInitialized>

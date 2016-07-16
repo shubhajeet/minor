@@ -1,0 +1,4 @@
+vhdl work "multiplexer.vhd"
+vhdl work "multiplexer_test.vhd"
+vhdl work "state_machine_unit.vhd"
+vhdl work "control_unit_ddr.vhd"

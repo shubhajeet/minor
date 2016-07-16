@@ -1,4 +1,5 @@
 vhdl work "C:\Users\user\FPGA\ddram\state_init.vhd"
+vhdl work "C:\Users\user\FPGA\ddram\read_write_unit.vhd"
+vhdl work "C:\Users\user\FPGA\ddram\multiplexer.vhd"
 vhdl work "C:\Users\user\FPGA\ddram\dcm_clk.vhd"
 vhdl work "C:\Users\user\FPGA\ddram\control_unit_ddr.vhd"
-vhdl work "C:\Users\user\FPGA\ddram\state_machine_unit.vhd"

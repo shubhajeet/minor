@@ -1,5 +1,6 @@
 vhdl work "state_init.vhd"
+vhdl work "read_write_unit.vhd"
+vhdl work "multiplexer.vhd"
 vhdl work "dcm_clk.vhd"
 vhdl work "control_unit_ddr.vhd"
 vhdl work "control_test.vhd"
-vhdl work "state_machine_unit.vhd"

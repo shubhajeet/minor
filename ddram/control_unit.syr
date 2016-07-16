@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> Reading design: control_unit.prj
 
@@ -107,10 +107,12 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "C:/Users/user/FPGA/ddram/dcm_clk.vhd" in Library work.
 Architecture behavioral of Entity dcm_clk is up to date.
 Compiling vhdl file "C:/Users/user/FPGA/ddram/state_init.vhd" in Library work.
-Entity <state_init> compiled.
-Entity <state_init> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/user/FPGA/ddram/state_machine_unit.vhd" in Library work.
-Architecture behavioral of Entity state_mech is up to date.
+Architecture behavioral of Entity state_init is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/ddram/read_write_unit.vhd" in Library work.
+Architecture behavioral of Entity read_write_unit is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/ddram/multiplexer.vhd" in Library work.
+Entity <multiplexer> compiled.
+Entity <multiplexer> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" in Library work.
 Architecture behavioral of Entity control_unit is up to date.
 
@@ -127,6 +129,9 @@ Analyzing hierarchy for entity <state_init> in library <work> (architecture <Beh
 	ADDR_WIDTH = 13
 	DATA_WIDTH = 16
 
+Analyzing hierarchy for entity <multiplexer> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -134,7 +139,10 @@ Analyzing hierarchy for entity <state_init> in library <work> (architecture <Beh
 Analyzing generic Entity <control_unit> in library <work> (Architecture <behavioral>).
 	ADDR_WIDTH = 13
 	DATA_WIDTH = 16
-WARNING:Xst:753 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" line 99: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm_clk'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" line 152: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm_clk'.
+WARNING:Xst:2211 - "C:/Users/user/FPGA/ddram/control_unit_ddr.vhd" line 184: Instantiating black box module <read_write_unit>.
+    Set user-defined property "ADDR_WIDTH =  13" for instance <Inst_read_write_unit> in unit <control_unit>.
+    Set user-defined property "DATA_WIDTH =  16" for instance <Inst_read_write_unit> in unit <control_unit>.
 Entity <control_unit> analyzed. Unit <control_unit> generated.
 
 Analyzing Entity <dcm_clk> in library <work> (Architecture <behavioral>).
@@ -165,6 +173,12 @@ Analyzing generic Entity <state_init> in library <work> (Architecture <Behaviora
 INFO:Xst:2679 - Register <cs_n> in unit <state_init> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <state_init> analyzed. Unit <state_init> generated.
 
+Analyzing generic Entity <multiplexer> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+WARNING:Xst:819 - "C:/Users/user/FPGA/ddram/multiplexer.vhd" line 58: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <addr_a>, <addr_b>
+Entity <multiplexer> analyzed. Unit <multiplexer> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -174,34 +188,16 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <state_init>.
     Related source file is "C:/Users/user/FPGA/ddram/state_init.vhd".
-WARNING:Xst:2563 - Inout <data<0>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<1>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<2>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<3>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<4>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<5>> is never assigned. Tied to value Z.
 WARNING:Xst:647 - Input <clk_180> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:2563 - Inout <data<6>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <dqs_l> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<7>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<8>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <dqs_u> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<9>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<10>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<11>> is never assigned. Tied to value Z.
-WARNING:Xst:647 - Input <we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:2563 - Inout <data<12>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<13>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<14>> is never assigned. Tied to value Z.
-WARNING:Xst:2563 - Inout <data<15>> is never assigned. Tied to value Z.
 WARNING:Xst:646 - Signal <col_count_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <col_count_next> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+INFO:Xst:1799 - State wait_state_stop is never reached in FSM <state_reg>.
     Found finite state machine <FSM_0> for signal <state_reg>.
     -----------------------------------------------------------------------
-    | States             | 27                                             |
-    | Transitions        | 29                                             |
+    | States             | 25                                             |
+    | Transitions        | 27                                             |
     | Inputs             | 2                                              |
-    | Outputs            | 27                                             |
+    | Outputs            | 25                                             |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -229,33 +225,20 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
     Found 13-bit register for signal <addr>.
     Found 1-bit register for signal <we_n>.
     Found 1-bit register for signal <ras_n>.
-    Found 1-bit tristate buffer for signal <dqs_l>.
-    Found 1-bit tristate buffer for signal <dqs_u>.
     Found 2-bit register for signal <addr_bank>.
     Found 1-bit register for signal <cas_n>.
-    Found 1-bit tristate buffer for signal <data<15>>.
-    Found 1-bit tristate buffer for signal <data<14>>.
-    Found 1-bit tristate buffer for signal <data<13>>.
-    Found 1-bit tristate buffer for signal <data<12>>.
-    Found 1-bit tristate buffer for signal <data<11>>.
-    Found 1-bit tristate buffer for signal <data<10>>.
-    Found 1-bit tristate buffer for signal <data<9>>.
-    Found 1-bit tristate buffer for signal <data<8>>.
-    Found 1-bit tristate buffer for signal <data<7>>.
-    Found 1-bit tristate buffer for signal <data<6>>.
-    Found 1-bit tristate buffer for signal <data<5>>.
-    Found 1-bit tristate buffer for signal <data<4>>.
-    Found 1-bit tristate buffer for signal <data<3>>.
-    Found 1-bit tristate buffer for signal <data<2>>.
-    Found 1-bit tristate buffer for signal <data<1>>.
-    Found 1-bit tristate buffer for signal <data<0>>.
     Found 14-bit up counter for signal <n_count_reg>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
 	inferred  19 D-type flip-flop(s).
-	inferred  18 Tristate(s).
 Unit <state_init> synthesized.
+
+
+Synthesizing Unit <multiplexer>.
+    Related source file is "C:/Users/user/FPGA/ddram/multiplexer.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <multiplexer> synthesized.
 
 
 Synthesizing Unit <dcm_clk>.
@@ -282,8 +265,6 @@ Macro Statistics
  1-bit latch                                           : 6
  13-bit latch                                          : 1
  2-bit latch                                           : 1
-# Tristates                                            : 18
- 1-bit tristate buffer                                 : 18
 
 =========================================================================
 
@@ -292,38 +273,37 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <Inst_state_init/state_reg/FSM> on signal <state_reg[1:27]> with one-hot encoding.
-------------------------------------------------
+Optimizing FSM <Inst_state_init/state_reg/FSM> on signal <state_reg[1:25]> with one-hot encoding.
+----------------------------------------------
  State           | Encoding
-------------------------------------------------
- idle            | 000000000000000000000000001
- counting        | 000000000000000000000000010
- precharge1      | 000000000000000000000000100
- nop_state1      | 000000000000000000000001000
- wait_state1     | 000000000000000000000010000
- mode_reg_state1 | 000000000000000000000100000
- nop_state2      | 000000000000000000001000000
- mode_reg_state2 | 000000000000000000010000000
- nop_state3      | 000000000000000000100000000
- precharge2      | 000000000000000001000000000
- nop_state4      | 000000000000000010000000000
- wait_state4     | 000000000000000100000000000
- auto_refresh    | 000000000000001000000000000
- nop_state5      | 000000000000010000000000000
- wait_state5     | 000000000000100000000000000
- wait_state6     | 000000000001000000000000000
- wait_state7     | 000000000010000000000000000
- auto_refresh2   | 000000000100000000000000000
- nop_state6      | 000000001000000000000000000
- wait_state9     | 000000010000000000000000000
- wait_state10    | 000000100000000000000000000
- wait_state11    | 000001000000000000000000000
- mode_reg_state3 | 000010000000000000000000000
- nop_state7      | 000100000000000000000000000
- active_state    | 001000000000000000000000000
- nop_state8      | 010000000000000000000000000
- stop            | 100000000000000000000000000
-------------------------------------------------
+----------------------------------------------
+ idle            | 0000000000000000000000001
+ counting        | 0000000000000000000000010
+ precharge1      | 0000000000000000000000100
+ nop_state1      | 0000000000000000000001000
+ wait_state1     | 0000000000000000000010000
+ mode_reg_state1 | 0000000000000000000100000
+ nop_state2      | 0000000000000000001000000
+ mode_reg_state2 | 0000000000000000010000000
+ nop_state3      | 0000000000000000100000000
+ precharge2      | 0000000000000001000000000
+ nop_state4      | 0000000000000010000000000
+ wait_state4     | 0000000000000100000000000
+ auto_refresh    | 0000000000001000000000000
+ nop_state5      | 0000000000010000000000000
+ wait_state5     | 0000000000100000000000000
+ wait_state6     | 0000000001000000000000000
+ wait_state7     | 0000000010000000000000000
+ auto_refresh2   | 0000000100000000000000000
+ nop_state6      | 0000001000000000000000000
+ wait_state9     | 0000010000000000000000000
+ wait_state10    | 0000100000000000000000000
+ wait_state11    | 0001000000000000000000000
+ active_state    | 0010000000000000000000000
+ nop_state8      | 0100000000000000000000000
+ wait_state_stop | unreached
+ stop            | 1000000000000000000000000
+----------------------------------------------
 WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block locked_reg.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
@@ -348,22 +328,41 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <5> in Unit <LPM_LATCH_3> is equivalent to the following FF/Latch, which will be removed : <0> 
-INFO:Xst:2261 - The FF/Latch <12> in Unit <LPM_LATCH_3> is equivalent to the following 9 FFs/Latches, which will be removed : <11> <10> <9> <8> <6> <4> <3> <2> <1> 
+INFO:Xst:2261 - The FF/Latch <12> in Unit <LPM_LATCH_3> is equivalent to the following 9 FFs/Latches, which will be removed : <11> <10> <9> <7> <6> <4> <3> <2> <1> 
 WARNING:Xst:1426 - The value init of the FF/Latch locked_reg hinder the constant cleaning in the block state_init.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1710 - FF/Latch <addr_bank_reg_1> (without init value) has a constant value of 0 in block <state_init>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_bank_1> (without init value) has a constant value of 0 in block <state_init>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <Inst_state_init/addr_12> in Unit <control_unit> is equivalent to the following 9 FFs/Latches, which will be removed : <Inst_state_init/addr_11> <Inst_state_init/addr_10> <Inst_state_init/addr_9> <Inst_state_init/addr_8> <Inst_state_init/addr_6> <Inst_state_init/addr_4> <Inst_state_init/addr_3> <Inst_state_init/addr_2> <Inst_state_init/addr_1> 
-INFO:Xst:2261 - The FF/Latch <Inst_state_init/addr_5> in Unit <control_unit> is equivalent to the following FF/Latch, which will be removed : <Inst_state_init/addr_0> 
+INFO:Xst:2261 - The FF/Latch <addr_1> in Unit <state_init> is equivalent to the following 9 FFs/Latches, which will be removed : <addr_2> <addr_3> <addr_4> <addr_6> <addr_7> <addr_9> <addr_10> <addr_11> <addr_12> 
+INFO:Xst:2261 - The FF/Latch <addr_reg_0> in Unit <state_init> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_reg_5> <addr_reg_8> 
+INFO:Xst:2261 - The FF/Latch <addr_0> in Unit <state_init> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_5> <addr_8> 
 
 Optimizing unit <control_unit> ...
 
+Optimizing unit <state_init> ...
+
 Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <dqs_l> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <dqs_u> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<15>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<14>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<13>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<12>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<11>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<10>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<9>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<8>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<7>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<6>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<5>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<4>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<3>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<2>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<1>> driven by black box <read_write_unit>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <data<0>> driven by black box <read_write_unit>. Possible simulation mismatch.
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block control_unit, actual ratio is 1.
-FlipFlop Inst_state_init/addr_12 has been replicated 9 time(s) to handle iob=true attribute.
-FlipFlop Inst_state_init/addr_5 has been replicated 1 time(s) to handle iob=true attribute.
+Latch Inst_state_init/init_done has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -371,8 +370,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 59
- Flip-Flops                                            : 59
+# Registers                                            : 46
+ Flip-Flops                                            : 46
 
 =========================================================================
 
@@ -401,34 +400,35 @@ Design Statistics
 # IOs                              : 56
 
 Cell Usage :
-# BELS                             : 115
+# BELS                             : 123
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 1
 #      LUT1                        : 13
 #      LUT2                        : 20
-#      LUT3                        : 3
-#      LUT4                        : 28
+#      LUT3                        : 19
+#      LUT4                        : 27
 #      LUT4_L                      : 1
-#      MUXCY                       : 30
-#      MUXF5                       : 1
+#      MUXCY                       : 24
+#      MUXF5                       : 2
 #      VCC                         : 1
 #      XORCY                       : 14
-# FlipFlops/Latches                : 69
-#      FD                          : 18
-#      FDC                         : 25
+# FlipFlops/Latches                : 56
+#      FD                          : 7
+#      FDC                         : 23
 #      FDCE                        : 15
 #      FDPE                        : 1
-#      LD                          : 6
-#      LD_1                        : 4
+#      LD                          : 7
+#      LD_1                        : 3
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 55
-#      IBUF                        : 1
+# IO Buffers                       : 56
+#      IBUF                        : 2
 #      IBUFG                       : 1
-#      OBUF                        : 35
-#      OBUFT                       : 18
+#      OBUF                        : 53
 # DCMs                             : 1
 #      DCM_SP                      : 1
+# Others                           : 1
+#      read_write_unit             : 1
 =========================================================================
 
 Device utilization summary:
@@ -436,12 +436,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       47  out of   4656     1%  
- Number of Slice Flip Flops:             50  out of   9312     0%  
- Number of 4 input LUTs:                 68  out of   9312     0%  
+ Number of Slices:                       48  out of   4656     1%  
+ Number of Slice Flip Flops:             54  out of   9312     0%  
+ Number of 4 input LUTs:                 81  out of   9312     0%  
  Number of IOs:                          56
- Number of bonded IOBs:                  55  out of    232    23%  
-    IOB Flip Flops:                      19
+ Number of bonded IOBs:                  56  out of    232    24%  
+    IOB Flip Flops:                       2
  Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      4    25%  
 
@@ -466,13 +466,13 @@ Clock Information:
 -------------------------------------------------------------------------------------+-----------------------------------------+-------+
 Clock Signal                                                                         | Clock buffer(FF name)                   | Load  |
 -------------------------------------------------------------------------------------+-----------------------------------------+-------+
-Inst_state_init/addr_reg_or0000(Inst_state_init/addr_reg_or0000_wg_cy<5>:O)          | NONE(*)(Inst_state_init/addr_reg_12)    | 3     |
-clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK0           | 41    |
+Inst_state_init/addr_reg_or0000(Inst_state_init/addr_reg_or0000_wg_cy<4>:O)          | NONE(*)(Inst_state_init/addr_reg_12)    | 2     |
+clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK0           | 39    |
 Inst_state_init/addr_bank_reg_or0000(Inst_state_init/addr_bank_reg_or0000_wg_cy<5>:O)| NONE(*)(Inst_state_init/addr_bank_reg_0)| 1     |
 Inst_state_init/ras_reg_not0001(Inst_state_init/ras_reg_not00011:O)                  | NONE(*)(Inst_state_init/ras_reg)        | 3     |
-Inst_state_init/init_done_not0001(Inst_state_init/init_done_not00011:O)              | NONE(*)(Inst_state_init/init_done)      | 1     |
+Inst_state_init/init_done_not0001(Inst_state_init/init_done_not00011:O)              | NONE(*)(Inst_state_init/init_done)      | 2     |
 Inst_state_init/clk_en_reg_not0001(Inst_state_init/clk_en_reg_not00011:O)            | NONE(*)(Inst_state_init/clk_en_reg)     | 1     |
-clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK90          | 18    |
+clk                                                                                  | Inst_dcm_clk/DCM_SP_INST:CLK90          | 7     |
 -------------------------------------------------------------------------------------+-----------------------------------------+-------+
 (*) These 5 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -484,7 +484,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-reset                              | IBUF                   | 41    |
+reset                              | IBUF                   | 39    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -493,8 +493,8 @@ Speed Grade: -4
 
    Minimum period: 5.442ns (Maximum Frequency: 183.756MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.394ns
-   Maximum combinational path delay: No path found
+   Maximum output required time after clock: 6.315ns
+   Maximum combinational path delay: 4.895ns
 
 Timing Detail:
 --------------
@@ -503,7 +503,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.442ns (frequency: 183.756MHz)
-  Total number of paths / destination ports: 370 / 54
+  Total number of paths / destination ports: 368 / 52
 -------------------------------------------------------------------------
 Delay:               5.442ns (Levels of Logic = 3)
   Source:            Inst_state_init/n_count_reg_5 (FF)
@@ -528,51 +528,73 @@ Delay:               5.442ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              4.394ns (Levels of Logic = 1)
-  Source:            Inst_state_init/n_count_reg_13 (FF)
-  Destination:       count_out<13> (PAD)
-  Source Clock:      clk rising
+Offset:              5.904ns (Levels of Logic = 2)
+  Source:            Inst_state_init/addr_1 (FF)
+  Destination:       addr<12> (PAD)
+  Source Clock:      clk rising +90
 
-  Data Path: Inst_state_init/n_count_reg_13 to count_out<13>
+  Data Path: Inst_state_init/addr_1 to addr<12>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             3   0.591   0.531  Inst_state_init/n_count_reg_13 (Inst_state_init/n_count_reg_13)
-     OBUF:I->O                 3.272          count_out_13_OBUF (count_out<13>)
+     FD:C->Q              10   0.591   0.917  Inst_state_init/addr_1 (Inst_state_init/addr_1)
+     LUT3:I2->O            1   0.704   0.420  Inst_multiplexer/addr<9>1 (addr_9_OBUF)
+     OBUF:I->O                 3.272          addr_9_OBUF (addr<9>)
     ----------------------------------------
-    Total                      4.394ns (3.863ns logic, 0.531ns route)
-                                       (87.9% logic, 12.1% route)
+    Total                      5.904ns (4.567ns logic, 1.337ns route)
+                                       (77.4% logic, 22.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_state_init/init_done_not0001'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              4.368ns (Levels of Logic = 1)
+Offset:              6.315ns (Levels of Logic = 2)
   Source:            Inst_state_init/init_done (LATCH)
-  Destination:       locked_out (PAD)
+  Destination:       we_n (PAD)
   Source Clock:      Inst_state_init/init_done_not0001 falling
 
-  Data Path: Inst_state_init/init_done to locked_out
+  Data Path: Inst_state_init/init_done to we_n
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.676   0.420  Inst_state_init/init_done (Inst_state_init/init_done)
-     OBUF:I->O                 3.272          locked_out_OBUF (locked_out)
+     LD:G->Q              18   0.676   1.243  Inst_state_init/init_done (Inst_state_init/init_done)
+     LUT2:I0->O            1   0.704   0.420  Inst_multiplexer/addr_bank<1>1 (addr_bank_1_OBUF)
+     OBUF:I->O                 3.272          addr_bank_1_OBUF (addr_bank<1>)
     ----------------------------------------
-    Total                      4.368ns (3.948ns logic, 0.420ns route)
-                                       (90.4% logic, 9.6% route)
+    Total                      6.315ns (4.652ns logic, 1.663ns route)
+                                       (73.7% logic, 26.3% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Delay:               4.895ns (Levels of Logic = 2)
+  Source:            Inst_read_write_unit:we_n (PAD)
+  Destination:       we_n (PAD)
+
+  Data Path: Inst_read_write_unit:we_n to we_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    read_write_unit:we_n    1   0.000   0.499  Inst_read_write_unit (we_n_b)
+     LUT3:I1->O            1   0.704   0.420  Inst_multiplexer/we_n1 (we_n_OBUF)
+     OBUF:I->O                 3.272          we_n_OBUF (we_n)
+    ----------------------------------------
+    Total                      4.895ns (3.976ns logic, 0.919ns route)
+                                       (81.2% logic, 18.8% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "ADDR_WIDTH 13": Did not attach to Inst_read_write_unit.
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.64 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.51 secs
  
 --> 
 
-Total memory usage is 204860 kilobytes
+Total memory usage is 204540 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   37 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
 

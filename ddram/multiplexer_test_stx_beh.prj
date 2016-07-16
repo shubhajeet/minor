@@ -1,0 +1,4 @@
+vhdl isim_temp "multiplexer.vhd"
+vhdl isim_temp "multiplexer_test.vhd"
+vhdl isim_temp "state_machine_unit.vhd"
+vhdl isim_temp "control_unit_ddr.vhd"
