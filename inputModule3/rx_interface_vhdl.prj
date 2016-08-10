@@ -1,0 +1,4 @@
+vhdl work "C:\Users\user\FPGA\uart0.0\inputModule2\uart_interf.vhd"
+vhdl work "C:\Users\user\FPGA\uart0.0\inputModule2\receiver.vhd"
+vhdl work "C:\Users\user\FPGA\uart0.0\inputModule2\baud_rate_generator.vhd"
+vhdl work "C:\Users\user\FPGA\uart0.0\inputModule2\rx_interface.vhd"

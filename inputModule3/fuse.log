@@ -1,0 +1,41 @@
+Running: D:\Xilinx\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test_isim_beh.exe -prj C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test_beh.prj work.sam_in_mem_test 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/vga_sync.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/uart_interf.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/receiver.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/ram.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/out_buf.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/baud_rate_generator.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/address_gen.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_vga.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/rx_interface.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/apple.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.vhd" into library work
+Parsing VHDL file "C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package textio
+Compiling architecture behavioral of entity vga_sync [\vga_sync(9)\]
+Compiling architecture behavioral of entity output_buffer [\output_buffer(24)\]
+Compiling architecture behavioral of entity sameer_vga [\sameer_vga(9,24)\]
+Compiling architecture behavioral of entity dual_port_ram_sync [\dual_port_ram_sync(9,24)\]
+Compiling architecture behavioral of entity address_sequencer [\address_sequencer(9)\]
+Compiling architecture behavioral of entity ram_sequencer [\ram_sequencer(9,24)\]
+Compiling architecture arch of entity uart_rx [\uart_rx(8,8,16)\]
+Compiling architecture behavioral of entity uart_interface [\uart_interface(24,8)\]
+Compiling architecture behavioral of entity baud_rate_gen [baud_rate_gen_default]
+Compiling architecture behavioral of entity rx_interface [\rx_interface(24,8)\]
+Compiling architecture behavioral of entity sameer_in_mem [\sameer_in_mem(9,24,8)\]
+Compiling architecture behavior of entity sam_in_mem_test
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 27 VHDL Units
+Built simulation executable C:/Users/user/FPGA/uart0.0/inputModule2/sam_in_mem_test_isim_beh.exe
+Fuse Memory Usage: 34420 KB
+Fuse CPU Usage: 1327 ms

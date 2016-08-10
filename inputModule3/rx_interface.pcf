@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Wed Jun 29 07:46:50 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "rx_full" LOCATE = SITE "F9" LEVEL 1;
+COMP "rd_uart" LOCATE = SITE "N17" LEVEL 1;
+COMP "rx_dout<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "rx_dout<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "rx_dout<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "rx_dout<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "rx_dout<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "rx_dout<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "reset" LOCATE = SITE "H13" LEVEL 1;
+COMP "rx_dout<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "rx_din" LOCATE = SITE "R7" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

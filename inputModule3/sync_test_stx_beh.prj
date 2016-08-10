@@ -1,0 +1,2 @@
+vhdl isim_temp "vga_sync.vhd"
+vhdl isim_temp "sync_test.vhd"

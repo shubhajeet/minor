@@ -1,0 +1,26 @@
+#NET "switch" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP;
+#NET "rd_uart" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP;
+#NET "data_in<2>" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP;
+NET "rd_uart" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP;
+
+NET "rx_din" LOC= "R7" | IOSTANDARD= LVTTL ; 
+NET "reset" LOC = "H13" | IOSTANDARD = LVTTL | PULLDOWN ;
+
+NET "clk" LOC="C9" | IOSTANDARD = LVCMOS33;
+
+#vga  ko yeti matra ho
+#NET "dout_rgb<0>" LOC = "H14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+#NET "dout_rgb<1>" LOC = "H15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+#NET "dout_rgb<2>" LOC = "G15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+#NET "hsync" LOC = "F15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+#NET "vsync" LOC = "F14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+
+#Led
+NET "rx_full" LOC= "F9" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<6>" LOC= "E9" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<5>" LOC= "D11" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<4>" LOC= "C11" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<3>" LOC= "F11" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<2>" LOC= "E11" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<1>" LOC= "E12" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;
+NET "rx_dout<0>" LOC= "F12" | IOSTANDARD= LVTTL | SLEW= SLOW | DRIVE= 8 ;

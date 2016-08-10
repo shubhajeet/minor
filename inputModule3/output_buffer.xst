@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/sameer/Downloads/inputModule3/inputModule3/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/sameer/Downloads/inputModule3/inputModule3/xst"
+elaborate
+-ifn output_buffer.prj
+-ifmt mixed

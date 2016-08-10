@@ -1,0 +1,3 @@
+work	"out_buf.vhd"
+work	"sameer_vga.vhd"
+work	"vga_sync.vhd"

@@ -1,0 +1,805 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.42 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.42 secs
+ 
+--> Reading design: sameer_in_mem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sameer_in_mem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sameer_in_mem"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : sameer_in_mem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/receiver.vhd" in Library work.
+Architecture arch of Entity uart_rx is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/uart_interf.vhd" in Library work.
+Architecture behavioral of Entity uart_interface is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/baud_rate_generator.vhd" in Library work.
+Architecture behavioral of Entity baud_rate_gen is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd" in Library work.
+Architecture behavioral of Entity dual_port_ram_sync is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/address_gen.vhd" in Library work.
+Architecture behavioral of Entity address_sequencer is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/vga_sync.vhd" in Library work.
+Architecture behavioral of Entity vga_sync is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/out_buf.vhd" in Library work.
+Architecture behavioral of Entity output_buffer is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_vga.vhd" in Library work.
+Architecture behavioral of Entity sameer_vga is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/apple.vhd" in Library work.
+Architecture behavioral of Entity ram_sequencer is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/rx_interface.vhd" in Library work.
+Architecture behavioral of Entity rx_interface is up to date.
+Compiling vhdl file "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" in Library work.
+Entity <sameer_in_mem> compiled.
+Entity <sameer_in_mem> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <sameer_in_mem> in library <work> (architecture <behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+	DBIT = 8
+
+Analyzing hierarchy for entity <sameer_vga> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+
+Analyzing hierarchy for entity <ram_sequencer> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+
+Analyzing hierarchy for entity <rx_interface> in library <work> (architecture <Behavioral>) with generics.
+	DATA_WIDTH = 24
+	DBIT = 8
+
+Analyzing hierarchy for entity <vga_sync> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+
+Analyzing hierarchy for entity <output_buffer> in library <work> (architecture <Behavioral>) with generics.
+	DATA_WIDTH = 24
+
+Analyzing hierarchy for entity <dual_port_ram_sync> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+
+Analyzing hierarchy for entity <address_sequencer> in library <work> (architecture <Behavioral>) with generics.
+	ADDR_WIDTH = 13
+
+Analyzing hierarchy for entity <uart_rx> in library <work> (architecture <arch>) with generics.
+	DBIT = 8
+	SB_TICK = 16
+	TOT_DBIT = 8
+
+Analyzing hierarchy for entity <uart_interface> in library <work> (architecture <Behavioral>) with generics.
+	DATA_WIDTH = 24
+	DBIT = 8
+
+Analyzing hierarchy for entity <baud_rate_gen> in library <work> (architecture <Behavioral>) with generics.
+	M = 163
+	N = 8
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <sameer_in_mem> in library <work> (Architecture <behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+	DBIT = 8
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 121: Unconnected output port 'pixel_x' of component 'sameer_vga'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 121: Unconnected output port 'pixel_y' of component 'sameer_vga'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 143: Unconnected output port 'dout_a' of component 'ram_sequencer'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 162: Unconnected output port 'count_out' of component 'rx_interface'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 162: Unconnected output port 'data_out' of component 'rx_interface'.
+WARNING:Xst:753 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd" line 162: Unconnected output port 'rx_done_tick_out' of component 'rx_interface'.
+Entity <sameer_in_mem> analyzed. Unit <sameer_in_mem> generated.
+
+Analyzing generic Entity <sameer_vga> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+Entity <sameer_vga> analyzed. Unit <sameer_vga> generated.
+
+Analyzing generic Entity <vga_sync> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+WARNING:Xst:819 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/vga_sync.vhd" line 170: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <enable>, <h_count_reg>, <v_count_reg>
+INFO:Xst:2679 - Register <enable> in unit <vga_sync> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <vga_sync> analyzed. Unit <vga_sync> generated.
+
+Analyzing generic Entity <output_buffer> in library <work> (Architecture <Behavioral>).
+	DATA_WIDTH = 24
+Entity <output_buffer> analyzed. Unit <output_buffer> generated.
+
+Analyzing generic Entity <ram_sequencer> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+Entity <ram_sequencer> analyzed. Unit <ram_sequencer> generated.
+
+Analyzing generic Entity <dual_port_ram_sync> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+	DATA_WIDTH = 24
+WARNING:Xst:790 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd" line 57: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd" line 62: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd" line 53: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ram>
+Entity <dual_port_ram_sync> analyzed. Unit <dual_port_ram_sync> generated.
+
+Analyzing generic Entity <address_sequencer> in library <work> (Architecture <Behavioral>).
+	ADDR_WIDTH = 13
+WARNING:Xst:819 - "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/address_gen.vhd" line 80: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <addr_succ>, <addr_reg>
+Entity <address_sequencer> analyzed. Unit <address_sequencer> generated.
+
+Analyzing generic Entity <rx_interface> in library <work> (Architecture <Behavioral>).
+	DATA_WIDTH = 24
+	DBIT = 8
+Entity <rx_interface> analyzed. Unit <rx_interface> generated.
+
+Analyzing generic Entity <uart_rx> in library <work> (Architecture <arch>).
+	DBIT = 8
+	SB_TICK = 16
+	TOT_DBIT = 8
+Entity <uart_rx> analyzed. Unit <uart_rx> generated.
+
+Analyzing generic Entity <uart_interface> in library <work> (Architecture <Behavioral>).
+	DATA_WIDTH = 24
+	DBIT = 8
+Entity <uart_interface> analyzed. Unit <uart_interface> generated.
+
+Analyzing generic Entity <baud_rate_gen> in library <work> (Architecture <Behavioral>).
+	M = 163
+	N = 8
+Entity <baud_rate_gen> analyzed. Unit <baud_rate_gen> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/vga_sync.vhd".
+WARNING:Xst:647 - Input <en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 13-bit latch for signal <addr_count_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator greatequal for signal <addr_count_next$cmp_ge0000> created at line 176.
+    Found 10-bit comparator greater for signal <addr_count_next$cmp_gt0000> created at line 174.
+    Found 13-bit register for signal <addr_count_reg>.
+    Found 3-bit up counter for signal <bit_count_reg>.
+    Found 10-bit up counter for signal <h_count_reg>.
+    Found 10-bit comparator greatequal for signal <h_sync_next$cmp_ge0000> created at line 187.
+    Found 10-bit comparator lessequal for signal <h_sync_next$cmp_le0000> created at line 187.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 13-bit adder for signal <mux0000$addsub0000> created at line 174.
+    Found 10-bit up counter for signal <v_count_reg>.
+    Found 10-bit comparator greatequal for signal <v_sync_next$cmp_ge0000> created at line 189.
+    Found 10-bit comparator lessequal for signal <v_sync_next$cmp_le0000> created at line 189.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 10-bit comparator less for signal <video_on$cmp_lt0000> created at line 191.
+    Found 10-bit comparator less for signal <video_on$cmp_lt0001> created at line 191.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <vga_sync> synthesized.
+
+
+Synthesizing Unit <output_buffer>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/out_buf.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <output_buffer> synthesized.
+
+
+Synthesizing Unit <dual_port_ram_sync>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/ram.vhd".
+    Found 5000x24-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 5000x24-bit dual-port RAM <Mram_ram_ren> for signal <ram>.
+    Found 13-bit register for signal <addr_a_reg>.
+    Found 13-bit register for signal <addr_b_reg>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  26 D-type flip-flop(s).
+Unit <dual_port_ram_sync> synthesized.
+
+
+Synthesizing Unit <address_sequencer>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/address_gen.vhd".
+    Found 13-bit adder for signal <addr_count_next$addsub0000> created at line 99.
+    Found 13-bit register for signal <addr_count_reg>.
+    Found 13-bit up counter for signal <addr_reg>.
+    Found 1-bit register for signal <rx_read_finished_reg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <address_sequencer> synthesized.
+
+
+Synthesizing Unit <uart_rx>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/receiver.vhd".
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_done_tick_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8-bit register for signal <b_reg>.
+    Found 3-bit register for signal <n_reg>.
+    Found 3-bit adder for signal <n_reg$addsub0000> created at line 123.
+    Found 1-bit register for signal <rx_done_tick_reg>.
+    Found 4-bit register for signal <s_reg>.
+    Found 4-bit adder for signal <s_reg$share0000> created at line 87.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <uart_rx> synthesized.
+
+
+Synthesizing Unit <uart_interface>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/uart_interf.vhd".
+WARNING:Xst:653 - Signal <n_count_max> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000011.
+    Found 32-bit subtractor for signal <$sub0000> created at line 80.
+    Found 24-bit register for signal <buf_reg>.
+    Found 32-bit comparator equal for signal <buf_reg$cmp_eq0000> created at line 80.
+    Found 1-bit register for signal <flag_reg>.
+    Found 32-bit comparator not equal for signal <flag_reg$cmp_ne0000> created at line 80.
+    Found 2-bit register for signal <n_count_reg>.
+    Found 2-bit adder for signal <n_count_reg$addsub0000> created at line 85.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <uart_interface> synthesized.
+
+
+Synthesizing Unit <baud_rate_gen>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/baud_rate_generator.vhd".
+    Found 8-bit adder for signal <r_next$addsub0000> created at line 54.
+    Found 8-bit register for signal <r_reg>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <baud_rate_gen> synthesized.
+
+
+Synthesizing Unit <sameer_vga>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_vga.vhd".
+Unit <sameer_vga> synthesized.
+
+
+Synthesizing Unit <ram_sequencer>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/apple.vhd".
+Unit <ram_sequencer> synthesized.
+
+
+Synthesizing Unit <rx_interface>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/rx_interface.vhd".
+Unit <rx_interface> synthesized.
+
+
+Synthesizing Unit <sameer_in_mem>.
+    Related source file is "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.vhd".
+Unit <sameer_in_mem> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 5000x24-bit dual-port RAM                             : 2
+# Adders/Subtractors                                   : 7
+ 13-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 16
+ 1-bit register                                        : 6
+ 13-bit register                                       : 4
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 13-bit latch                                          : 1
+# Comparators                                          : 10
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 2
+ 10-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator not equal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <receiver/uart_receive/state_reg/FSM> on signal <state_reg[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 000
+ start | 001
+ data  | 011
+ stop  | 010
+ pulse | 110
+-------------------
+
+Synthesizing (advanced) Unit <dual_port_ram_sync>.
+INFO:Xst:3227 - The RAM <Mram_ram>, combined with <Mram_ram_ren>, will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_a_reg> <addr_b_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 5000-word x 24-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr_a>        |          |
+    |     diA            | connected to signal <din_a>         |          |
+    |     doA            | connected to signal <dout_a>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 5000-word x 24-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <addr_b>        |          |
+    |     doB            | connected to signal <dout_b>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <dual_port_ram_sync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 5000x24-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 7
+ 13-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 13-bit latch                                          : 1
+# Comparators                                          : 10
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 2
+ 10-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator not equal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <sameer_in_mem> ...
+
+Optimizing unit <address_sequencer> ...
+
+Optimizing unit <uart_rx> ...
+
+Optimizing unit <uart_interface> ...
+
+Optimizing unit <baud_rate_gen> ...
+
+Optimizing unit <vga_sync> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sameer_in_mem, actual ratio is 3.
+FlipFlop outputVGA/synchronizer/addr_count_reg_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop outputVGA/synchronizer/addr_count_reg_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 133
+ Flip-Flops                                            : 133
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sameer_in_mem.ngr
+Top Level Output File Name         : sameer_in_mem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 39
+
+Cell Usage :
+# BELS                             : 407
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 54
+#      LUT2                        : 31
+#      LUT2_L                      : 1
+#      LUT3                        : 65
+#      LUT3_L                      : 2
+#      LUT4                        : 115
+#      LUT4_D                      : 7
+#      LUT4_L                      : 2
+#      MUXCY                       : 54
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 59
+# FlipFlops/Latches                : 147
+#      FDC                         : 61
+#      FDCE                        : 71
+#      FDE                         : 1
+#      LD_1                        : 1
+#      LDCP                        : 13
+# RAMS                             : 12
+#      RAMB16_S2_S2                : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 3
+#      OBUF                        : 35
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      155  out of   4656     3%  
+ Number of Slice Flip Flops:            134  out of   9312     1%  
+ Number of 4 input LUTs:                285  out of   9312     3%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    232    16%  
+    IOB Flip Flops:                      13
+ Number of BRAMs:                        12  out of     20    60%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+Clock Signal                                                                                           | Clock buffer(FF name)                             | Load  |
+-------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+clk                                                                                                    | BUFGP                                             | 145   |
+receiver/uart_receive/rx_done_tick_next_or0000(receiver/uart_receive/rx_done_tick_next_or00001:O)      | NONE(*)(receiver/uart_receive/rx_done_tick_next)  | 1     |
+outputVGA/synchronizer/addr_count_next_cmp_ge0000(outputVGA/synchronizer/addr_count_next_cmp_ge00001:O)| NONE(*)(outputVGA/synchronizer/addr_count_next_12)| 13    |
+-------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+Control Signal                                                                                           | Buffer(FF name)                                | Load  |
+---------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+reset                                                                                                    | IBUF                                           | 132   |
+outputVGA/synchronizer/addr_count_next_0__and0000(outputVGA/synchronizer/addr_count_next_0__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_0) | 1     |
+outputVGA/synchronizer/addr_count_next_0__and0001(outputVGA/synchronizer/addr_count_next_0__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_0) | 1     |
+outputVGA/synchronizer/addr_count_next_10__and0000(outputVGA/synchronizer/addr_count_next_10__and00001:O)| NONE(outputVGA/synchronizer/addr_count_next_10)| 1     |
+outputVGA/synchronizer/addr_count_next_10__and0001(outputVGA/synchronizer/addr_count_next_10__and00011:O)| NONE(outputVGA/synchronizer/addr_count_next_10)| 1     |
+outputVGA/synchronizer/addr_count_next_11__and0000(outputVGA/synchronizer/addr_count_next_11__and00001:O)| NONE(outputVGA/synchronizer/addr_count_next_11)| 1     |
+outputVGA/synchronizer/addr_count_next_11__and0001(outputVGA/synchronizer/addr_count_next_11__and00011:O)| NONE(outputVGA/synchronizer/addr_count_next_11)| 1     |
+outputVGA/synchronizer/addr_count_next_12__and0000(outputVGA/synchronizer/addr_count_next_12__and00001:O)| NONE(outputVGA/synchronizer/addr_count_next_12)| 1     |
+outputVGA/synchronizer/addr_count_next_12__and0001(outputVGA/synchronizer/addr_count_next_12__and00011:O)| NONE(outputVGA/synchronizer/addr_count_next_12)| 1     |
+outputVGA/synchronizer/addr_count_next_1__and0000(outputVGA/synchronizer/addr_count_next_1__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_1) | 1     |
+outputVGA/synchronizer/addr_count_next_1__and0001(outputVGA/synchronizer/addr_count_next_1__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_1) | 1     |
+outputVGA/synchronizer/addr_count_next_2__and0000(outputVGA/synchronizer/addr_count_next_2__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_2) | 1     |
+outputVGA/synchronizer/addr_count_next_2__and0001(outputVGA/synchronizer/addr_count_next_2__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_2) | 1     |
+outputVGA/synchronizer/addr_count_next_3__and0000(outputVGA/synchronizer/addr_count_next_3__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_3) | 1     |
+outputVGA/synchronizer/addr_count_next_3__and0001(outputVGA/synchronizer/addr_count_next_3__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_3) | 1     |
+outputVGA/synchronizer/addr_count_next_4__and0000(outputVGA/synchronizer/addr_count_next_4__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_4) | 1     |
+outputVGA/synchronizer/addr_count_next_4__and0001(outputVGA/synchronizer/addr_count_next_4__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_4) | 1     |
+outputVGA/synchronizer/addr_count_next_5__and0000(outputVGA/synchronizer/addr_count_next_5__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_5) | 1     |
+outputVGA/synchronizer/addr_count_next_5__and0001(outputVGA/synchronizer/addr_count_next_5__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_5) | 1     |
+outputVGA/synchronizer/addr_count_next_6__and0000(outputVGA/synchronizer/addr_count_next_6__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_6) | 1     |
+outputVGA/synchronizer/addr_count_next_6__and0001(outputVGA/synchronizer/addr_count_next_6__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_6) | 1     |
+outputVGA/synchronizer/addr_count_next_7__and0000(outputVGA/synchronizer/addr_count_next_7__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_7) | 1     |
+outputVGA/synchronizer/addr_count_next_7__and0001(outputVGA/synchronizer/addr_count_next_7__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_7) | 1     |
+outputVGA/synchronizer/addr_count_next_8__and0000(outputVGA/synchronizer/addr_count_next_8__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_8) | 1     |
+outputVGA/synchronizer/addr_count_next_8__and0001(outputVGA/synchronizer/addr_count_next_8__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_8) | 1     |
+outputVGA/synchronizer/addr_count_next_9__and0000(outputVGA/synchronizer/addr_count_next_9__and00001:O)  | NONE(outputVGA/synchronizer/addr_count_next_9) | 1     |
+outputVGA/synchronizer/addr_count_next_9__and0001(outputVGA/synchronizer/addr_count_next_9__and00011:O)  | NONE(outputVGA/synchronizer/addr_count_next_9) | 1     |
+---------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.967ns (Maximum Frequency: 100.331MHz)
+   Minimum input arrival time before clock: 5.350ns
+   Maximum output required time after clock: 10.422ns
+   Maximum combinational path delay: 6.180ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.967ns (frequency: 100.331MHz)
+  Total number of paths / destination ports: 5968 / 524
+-------------------------------------------------------------------------
+Delay:               9.967ns (Levels of Logic = 7)
+  Source:            ram_seq/address_gen/addr_count_reg_9 (FF)
+  Destination:       ram_seq/address_gen/addr_reg_12 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ram_seq/address_gen/addr_count_reg_9 to ram_seq/address_gen/addr_reg_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.706  ram_seq/address_gen/addr_count_reg_9 (ram_seq/address_gen/addr_count_reg_9)
+     LUT2_L:I0->LO         1   0.704   0.104  ram_seq/address_gen/addr_count_next<0>138 (ram_seq/address_gen/addr_count_next<0>138)
+     LUT4:I3->O            2   0.704   0.451  ram_seq/address_gen/addr_count_next<0>142 (ram_seq/address_gen/addr_count_next<0>142)
+     LUT4_D:I3->O         11   0.704   0.937  ram_seq/address_gen/addr_count_next<0>162 (ram_seq/address_gen/N01)
+     LUT4:I3->O            2   0.704   0.526  ram_seq/address_gen/addr_count_next<8>1 (ram_seq/address_gen/addr_count_next<8>)
+     LUT4:I1->O            2   0.704   0.451  ram_seq/address_gen/rx_read_finished_next_cmp_eq000014 (ram_seq/address_gen/rx_read_finished_next_cmp_eq000014)
+     LUT4_D:I3->O         12   0.704   0.965  ram_seq/address_gen/rx_read_finished_next_cmp_eq000046_SW0 (N43)
+     LUT4:I3->O            1   0.704   0.000  ram_seq/address_gen/Mcount_addr_reg_eqn_81 (ram_seq/address_gen/Mcount_addr_reg_eqn_8)
+     FDCE:D                    0.308          ram_seq/address_gen/addr_reg_8
+    ----------------------------------------
+    Total                      9.967ns (5.827ns logic, 4.140ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 7
+-------------------------------------------------------------------------
+Offset:              5.350ns (Levels of Logic = 4)
+  Source:            rx_in (PAD)
+  Destination:       receiver/uart_receive/s_reg_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rx_in to receiver/uart_receive/s_reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.622  rx_in_IBUF (rx_in_IBUF)
+     LUT4:I2->O            4   0.704   0.666  receiver/uart_receive/s_reg_mux0000<2>211 (receiver/uart_receive/N17)
+     LUT3:I1->O            1   0.704   0.424  receiver/uart_receive/s_reg_mux0000<1>42_SW0 (N69)
+     LUT4:I3->O            1   0.704   0.000  receiver/uart_receive/s_reg_mux0000<1>42 (receiver/uart_receive/s_reg_mux0000<1>)
+     FDC:D                     0.308          receiver/uart_receive/s_reg_2
+    ----------------------------------------
+    Total                      5.350ns (3.638ns logic, 1.712ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 118 / 34
+-------------------------------------------------------------------------
+Offset:              10.422ns (Levels of Logic = 5)
+  Source:            ram_seq/dual_ram/Mram_ram12 (RAM)
+  Destination:       data_out<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ram_seq/dual_ram/Mram_ram12 to data_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S2_S2:CLKB->DOB1    1   2.800   0.499  ram_seq/dual_ram/Mram_ram12 (dout_ramb<23>)
+     LUT3:I1->O            1   0.704   0.499  outputVGA/out_buf/rgb_reg<2>173 (outputVGA/out_buf/rgb_reg<2>173)
+     LUT3:I1->O            1   0.704   0.000  outputVGA/out_buf/rgb_reg<2>1108_F (N95)
+     MUXF5:I0->O           1   0.321   0.499  outputVGA/out_buf/rgb_reg<2>1108 (N01)
+     LUT3:I1->O            1   0.704   0.420  outputVGA/out_buf/rgb_out<2>1 (data_out_2_OBUF)
+     OBUF:I->O                 3.272          data_out_2_OBUF (data_out<2>)
+    ----------------------------------------
+    Total                     10.422ns (8.505ns logic, 1.917ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               6.180ns (Levels of Logic = 3)
+  Source:            sw (PAD)
+  Destination:       data_out<2> (PAD)
+
+  Data Path: sw to data_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.566  sw_IBUF (sw_IBUF)
+     LUT3:I2->O            1   0.704   0.420  outputVGA/out_buf/rgb_out<2>1 (data_out_2_OBUF)
+     OBUF:I->O                 3.272          data_out_2_OBUF (data_out<2>)
+    ----------------------------------------
+    Total                      6.180ns (5.194ns logic, 0.986ns route)
+                                       (84.0% logic, 16.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.88 secs
+ 
+--> 
+
+Total memory usage is 200764 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

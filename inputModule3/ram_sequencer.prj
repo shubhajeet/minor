@@ -1,0 +1,3 @@
+vhdl work "ram.vhd"
+vhdl work "address_gen.vhd"
+vhdl work "apple.vhd"

@@ -1,0 +1,130 @@
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/uart0.0/inputModule2/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/sameer/Downloads/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraintFile.ucf -p xc3s500e-fg320-4 sameer_in_mem.ngc sameer_in_mem.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sameer_in_mem_map.ncd sameer_in_mem.ngd sameer_in_mem.pcf 
+par -w -intstyle ise -ol high -t 1 sameer_in_mem_map.ncd sameer_in_mem.ncd sameer_in_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sameer_in_mem.twx sameer_in_mem.ncd -o sameer_in_mem.twr sameer_in_mem.pcf -ucf constraintFile.ucf 
+bitgen -intstyle ise -f sameer_in_mem.ut sameer_in_mem.ncd 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.syr" 
+xst -intstyle ise -ifn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.xst" -ofn "C:/Users/user/FPGA/inputModule5/inputModule3/inputModule3/sameer_in_mem.syr" 
