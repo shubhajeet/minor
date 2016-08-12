@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-07-16T16:38:32</DateModified>
+  <DateModified>2016-07-22T06:42:06</DateModified>
   <ModuleName>control_unit</ModuleName>
   <SummaryTimeStamp>2016-07-16T16:09:32</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/user/FPGA/ddram/iseconfig/control_unit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/user/FPGA/ddram\</ImplementationReportsDirectory>
+  <SavedFilePath>/media/sujit/Windows/Users/sujit/Projects/minor/ddram/iseconfig/control_unit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/media/sujit/Windows/Users/sujit/Projects/minor/ddram/</ImplementationReportsDirectory>
   <DateInitialized>2016-07-01T21:25:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
